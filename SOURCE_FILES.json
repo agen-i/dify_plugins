@@ -117,7 +117,8 @@
       },
       {
         "path": "app/nanobana/GUIDE.md",
-        "sha256": "e3d00055858a408680c22cd4e439d3cdd456d1fea9cd86caaab63f785d021990"
+        "sha256": "e3d00055858a408680c22cd4e439d3cdd456d1fea9cd86caaab63f785d021990",
+        "modification": "Replace the excluded environment-example copy step with local uncommitted environment-file creation; use uv for startup. Settings unchanged."
       },
       {
         "path": "app/nanobana/PRIVACY.md",

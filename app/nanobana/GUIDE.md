@@ -94,7 +94,7 @@ Study these examples to understand plugin implementation:
 <details>
 <summary><b>3. Testing & Debugging</b></summary>
 
-1. Copy `.env.example` to `.env` and configure:
+1. Create a local `.env` file in this plugin directory with the settings below. Keep this file uncommitted:
    ```
    INSTALL_METHOD=remote
    REMOTE_INSTALL_URL=debug.dify.ai:5003
@@ -103,7 +103,7 @@ Study these examples to understand plugin implementation:
 
 2. Run your plugin: 
    ```bash
-   python -m main
+   uv run python -m main
    ```
 
 3. Refresh your Dify instance to see the plugin (marked as "debugging")

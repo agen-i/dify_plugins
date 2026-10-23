@@ -5,7 +5,7 @@
 - Source visibility at copy time: public.
 - Copy semantics: new independent repository; no ownership transfer and no upstream history rewriting.
 
-The five plugin directories under `app/` and their functional tests are copied from this source only. `SOURCE_FILES.json` records the original paths and SHA-256 hashes. New files are minimal uv environment definitions/locks and repository usage/provenance documentation. The PDF plugin's existing environment and lock are retained. Necessary Black formatting is the only plugin Python source change.
+The five plugin directories under `app/` and their functional tests are copied from this source only. `SOURCE_FILES.json` records the original paths and SHA-256 hashes. New files are minimal uv environment definitions/locks and repository usage/provenance documentation. The PDF plugin's existing environment and lock are retained. Necessary Black formatting is the only plugin Python source change. The nanobana development guide now instructs creating an uncommitted local environment file and starting with uv, because environment examples are excluded from this copy.
 
 The upstream root `LICENSE` is retained verbatim, including “Copyright (c) 2025 Adoptive Market Crawler”. The PDF-specific `LICENSE`, `third_party/` license notices, assets, security/privacy documentation and already-public distribution packages are retained. No private inventory code or private generator material is included.
 
