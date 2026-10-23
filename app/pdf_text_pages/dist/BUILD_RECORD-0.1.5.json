@@ -1,0 +1,213 @@
+{
+  "created_utc": "2026-10-05T12:09:07.855433+00:00",
+  "producer": "native /root/auth_worker phase7 owned leaf",
+  "plugin_version": "0.1.5",
+  "base_path": "dist/pdf_text_pages-0.1.4-r2.difypkg",
+  "base_sha256": "433c7fe42f624871eb38301fe69940d521e02644004e21dadfd1711a238a87e0",
+  "command": ".local-bin/dify plugin package . -o dist/pdf_text_pages-0.1.5.difypkg",
+  "cli_version": "0.6.10",
+  "cli_sha256": "0cef74bcae375a4337c2ff7d42e4787717981a795e1c23cf56bb27ec07ec8304",
+  "package_path": "dist/pdf_text_pages-0.1.5.difypkg",
+  "package_sha256": "71c497f58f4d1bdb16973d0c4db6dc90c1bcb11dc0d258907c41c09d19978340",
+  "package_bytes": 447011,
+  "payload_file_count": 166,
+  "source_manifest_path": "dist/SOURCE_SHA256-0.1.5.txt",
+  "source_manifest_sha256": "9367b53d8bc672cfdd914912b5f46af3879c14421cfbe255a3c649f586f8e040",
+  "code_candidate_manifest_path": "docs/CANDIDATE_CODE_SHA256-0.1.5.txt",
+  "code_candidate_manifest_sha256": "418b601ca48a971d9a537b70d2b03f8306aa2e64a666f32840554dd2a1a0642b",
+  "test_results_path": "docs/phase7-test-results-0.1.5.txt",
+  "test_results_sha256": "ce0cbf24ae8335054d6fa34ba54da6652237ab20344946ce47e8b3da25ab35d4",
+  "full_suite": "required_now:138 passed,12 warnings in25.08s;exit0",
+  "payload_matches_source": true,
+  "no_new_module_setting_diagnostic": true,
+  "diff_from_installed_0.1.4": [
+    {
+      "path": "README.md",
+      "category": "docs",
+      "added_lines": 14,
+      "deleted_lines": 6
+    },
+    {
+      "path": "SECURITY.md",
+      "category": "docs",
+      "added_lines": 3,
+      "deleted_lines": 1
+    },
+    {
+      "path": "VERIFICATION.md",
+      "category": "docs",
+      "added_lines": 13,
+      "deleted_lines": 1
+    },
+    {
+      "path": "docs/CANDIDATE_CODE_SHA256-0.1.5.txt",
+      "category": "evidence",
+      "added_lines": 23,
+      "deleted_lines": 0
+    },
+    {
+      "path": "docs/LIVE_TESTS.md",
+      "category": "docs",
+      "added_lines": 4,
+      "deleted_lines": 2
+    },
+    {
+      "path": "docs/phase7-test-results-0.1.5.txt",
+      "category": "evidence",
+      "added_lines": 18,
+      "deleted_lines": 0
+    },
+    {
+      "path": "manifest.yaml",
+      "category": "code/config",
+      "added_lines": 1,
+      "deleted_lines": 1
+    },
+    {
+      "path": "pdf_core/config.py",
+      "category": "code/config",
+      "added_lines": 67,
+      "deleted_lines": 34
+    },
+    {
+      "path": "pdf_core/fetch.py",
+      "category": "code/config",
+      "added_lines": 2,
+      "deleted_lines": 1
+    },
+    {
+      "path": "pyproject.toml",
+      "category": "code/config",
+      "added_lines": 1,
+      "deleted_lines": 1
+    },
+    {
+      "path": "tests/test_auth_sources.py",
+      "category": "tests",
+      "added_lines": 4,
+      "deleted_lines": 0
+    },
+    {
+      "path": "tests/test_internal_mapping.py",
+      "category": "tests",
+      "added_lines": 168,
+      "deleted_lines": 0
+    },
+    {
+      "path": "uv.lock",
+      "category": "code/config",
+      "added_lines": 1,
+      "deleted_lines": 1
+    }
+  ],
+  "diff_totals": {
+    "docs": {
+      "added_lines": 34,
+      "deleted_lines": 10
+    },
+    "evidence": {
+      "added_lines": 41,
+      "deleted_lines": 0
+    },
+    "code/config": {
+      "added_lines": 72,
+      "deleted_lines": 38
+    },
+    "tests": {
+      "added_lines": 172,
+      "deleted_lines": 0
+    }
+  },
+  "preserved_packages": [
+    {
+      "path": "dist/pdf_text_pages-0.1.0.difypkg",
+      "sha256": "3e0f007086fdd2687bf0b79bfd41b1b26a32100ae7603f913d88f0f3b6aa14ff",
+      "bytes": 411452
+    },
+    {
+      "path": "dist/pdf_text_pages-0.1.1.difypkg",
+      "sha256": "60e36662c10b150f50f43ceccfdc315e93418b8f47426df00a7c3e3d1c7db478",
+      "bytes": 423466
+    },
+    {
+      "path": "dist/pdf_text_pages-0.1.2.difypkg",
+      "sha256": "d7b48f71e1f26d28b40855fa28aa866209f121fb52adad6ebd3e635dc5e5a353",
+      "bytes": 434920
+    },
+    {
+      "path": "dist/pdf_text_pages-0.1.3-r2.difypkg",
+      "sha256": "b7ae92afb69c9d440f3dbad95dfd8bacd3cb673c0e74fdc6db0fb343b68e1553",
+      "bytes": 455909
+    },
+    {
+      "path": "dist/pdf_text_pages-0.1.3.difypkg",
+      "sha256": "f9525b230c5a9b06e4c9a6e840811472570fc74813eee2c8298b18c8e6c7f240",
+      "bytes": 452831
+    },
+    {
+      "path": "dist/pdf_text_pages-0.1.4-r2.difypkg",
+      "sha256": "433c7fe42f624871eb38301fe69940d521e02644004e21dadfd1711a238a87e0",
+      "bytes": 440493
+    },
+    {
+      "path": "dist/pdf_text_pages-0.1.4.difypkg",
+      "sha256": "a45638c2d5da64c984830fb35aa76393fb40090fdd863d76bc92a3cd0aafcd9e",
+      "bytes": 440482
+    }
+  ],
+  "preserved_records": [
+    {
+      "path": "dist/BUILD_RECORD-0.1.1.json",
+      "sha256": "006614b1cbd30a0582fd9dbf5e7f69a42759ddf069e9cd0f567734ee5f9015c3"
+    },
+    {
+      "path": "dist/BUILD_RECORD-0.1.2.json",
+      "sha256": "f2eb2fd49aa15a1744d287dd354a3d5a304c32595ae799d41c16189e5e85ce03"
+    },
+    {
+      "path": "dist/BUILD_RECORD-0.1.3-r2.json",
+      "sha256": "5ce417c79e52fd4351e5838d212e4a0505b1433a9b9ae7dc7b9f2b7a05c751b1"
+    },
+    {
+      "path": "dist/BUILD_RECORD-0.1.3.json",
+      "sha256": "dbc2008876aa38be7729182e3d0e7cfdeb3a6eb87a172a089f4d4f61b3ddc016"
+    },
+    {
+      "path": "dist/BUILD_RECORD-0.1.4-r2.json",
+      "sha256": "e19eee40b8f2768a6b9b05d6f5de36d3ad2f8462a71120e2d43e72bc314e65f6"
+    },
+    {
+      "path": "dist/BUILD_RECORD.json",
+      "sha256": "8eb3ba9452581226a78fc2d39a2e9fa27c9075b2ac2ddbad7e56d0d16971df89"
+    },
+    {
+      "path": "dist/SOURCE_SHA256-0.1.1.txt",
+      "sha256": "f327b28237aa98bbafbfde91c29b8b7265e04ed14a2ddec7d63202497f743399"
+    },
+    {
+      "path": "dist/SOURCE_SHA256-0.1.2.txt",
+      "sha256": "0b4c545e6c3bf3a4f83344afabe5350b6101db4545b5d1cd7d74ab70663031ee"
+    },
+    {
+      "path": "dist/SOURCE_SHA256-0.1.3-r2.txt",
+      "sha256": "3a990e885de52a25595f8361a05b402dcff77909006dd602bca64247a758b4e8"
+    },
+    {
+      "path": "dist/SOURCE_SHA256-0.1.3.txt",
+      "sha256": "20b006879feddf3434e554d42ba30ba778a9ad6efa7f564eeac16de7e46657cc"
+    },
+    {
+      "path": "dist/SOURCE_SHA256-0.1.4-r2.txt",
+      "sha256": "e7d28660d49cd35f62848d236f5fd6107bcc0ffc088da7c96f058dd1a1951940"
+    },
+    {
+      "path": "dist/SOURCE_SHA256.txt",
+      "sha256": "ec6ef471ebf816f986a75fe33cd66c220b768a7ef061bb8a002c684029bb0469"
+    }
+  ],
+  "environment_changes_and_live_update": "not performed; prohibited by confirmed user customer-environment constraint",
+  "mapping_scope": "configured incoming file origin/root routes -> existing DIFY_INNER_API_URL, unchanged rawpath/query; internal direct/sameorigin retained; no publicconnect fallback",
+  "unsupported_mapping_prefix": "cross-origin external nonempty path including trailing slash, internal nonroot path -> CONFIG before network",
+  "new_install_update_T13_T15": "unperformed: same final 0.1.5 package; persistent-controller w1:pB owns admission",
+  "independent_review_and_root_acceptance": "unperformed; full local success not whole task completion"
+}

@@ -1,0 +1,58 @@
+identity:
+  author: "tkosht"
+  name: "nanobana"
+  label:
+    en_US: "nanobana"
+    zh_Hans: "nanobana"
+    pt_BR: "nanobana"
+    ja_JP: "nanobana"
+  description:
+    en_US: "Gemini Nano Banana image generation and editing tool"
+    zh_Hans: "Gemini Nano Banana image generation and editing tool"
+    pt_BR: "Gemini Nano Banana image generation and editing tool"
+    ja_JP: "Gemini Nano Banana 画像生成・編集ツール"
+  icon: "icon.svg"
+credentials_for_provider:
+  api_key:
+    type: secret-input
+    required: false
+    label:
+      en_US: Gemini API key (Developer API)
+      ja_JP: Gemini APIキー（Developer API）
+    placeholder:
+      en_US: Optional when using Vertex AI
+      ja_JP: Vertex AI を使う場合は空欄にできます
+    url: https://aistudio.google.com/u/0/apikey
+  vertex_project_id:
+    type: text-input
+    required: false
+    label:
+      en_US: Vertex AI Project ID
+      ja_JP: Vertex AI プロジェクトID
+    placeholder:
+      en_US: Google Cloud project ID. Leave blank to use Gemini API key mode.
+      ja_JP: Google Cloud プロジェクトID。Gemini APIキー mode では空欄。
+  vertex_location:
+    type: text-input
+    required: false
+    default: global
+    label:
+      en_US: Vertex AI Location
+      ja_JP: Vertex AI ロケーション
+    placeholder:
+      en_US: global
+      ja_JP: global
+  vertex_service_account_key:
+    type: secret-input
+    required: false
+    label:
+      en_US: Service Account Key (Leave blank if you use Application Default Credentials)
+      ja_JP: サービスアカウントキー（Application Default Credentials を使用する場合は空欄）
+    placeholder:
+      en_US: Enter your Google Cloud Service Account Key in base64 format
+      ja_JP: base64 形式の Google Cloud サービスアカウントキーを入力してください
+tools:
+  - tools/nanobana.yaml
+extra:
+  python:
+    source: provider/nanobana.py

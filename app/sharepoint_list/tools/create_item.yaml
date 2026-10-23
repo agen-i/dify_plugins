@@ -1,0 +1,37 @@
+identity:
+  name: sharepoint_list_create_item
+  author: tkosht
+  label:
+    en_US: Create List Item
+    ja_JP: リストアイテム作成
+description:
+  human:
+    en_US: Create a new SharePoint list item
+    ja_JP: SharePoint リストに新しいアイテムを作成します
+  llm: Create a new SharePoint list item
+parameters:
+  - name: list_url
+    type: string
+    required: true
+    label:
+      en_US: List URL
+      ja_JP: リストURL
+    human_description:
+      en_US: "SharePoint list URL (e.g., https://contoso.sharepoint.com/sites/demo/Lists/MyList/AllItems.aspx)"
+      ja_JP: "SharePoint リストの URL（例: https://contoso.sharepoint.com/sites/demo/Lists/MyList/AllItems.aspx）"
+    llm_description: SharePoint list URL (AllItems.aspx)
+    form: llm
+  - name: fields_json
+    type: string
+    required: true
+    label:
+      en_US: Fields (JSON)
+      ja_JP: フィールド（JSON）
+    human_description:
+      en_US: 'JSON object of field internal names to values. Example: {"Title": "Sample"}'
+      ja_JP: 'フィールド内部名と値のJSON。例: {"Title": "Sample"}'
+    llm_description: JSON object mapping SharePoint internal field names to values
+    form: llm
+extra:
+  python:
+    source: tools/create_item.py

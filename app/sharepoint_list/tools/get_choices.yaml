@@ -1,0 +1,37 @@
+identity:
+  name: sharepoint_list_get_choices
+  author: tkosht
+  label:
+    en_US: Get Choice Options
+    ja_JP: 選択肢一覧取得
+description:
+  human:
+    en_US: Fetch choice options for a specified SharePoint list field.
+    ja_JP: SharePoint リストの指定フィールドの選択肢を取得します。
+  llm: Fetch choice options for a specified SharePoint list field.
+parameters:
+  - name: list_url
+    type: string
+    required: true
+    label:
+      en_US: List URL
+      ja_JP: リストURL
+    human_description:
+      en_US: "SharePoint list URL (e.g., https://contoso.sharepoint.com/sites/demo/Lists/MyList/AllItems.aspx)"
+      ja_JP: "SharePoint リストの URL（例: https://contoso.sharepoint.com/sites/demo/Lists/MyList/AllItems.aspx）"
+    llm_description: SharePoint list URL (AllItems.aspx)
+    form: llm
+  - name: field_identifier
+    type: string
+    required: true
+    label:
+      en_US: Field Identifier
+      ja_JP: フィールド指定
+    human_description:
+      en_US: "Field internal name or display name of the choice column."
+      ja_JP: "選択肢列の内部名または表示名。"
+    llm_description: Field internal name or display name
+    form: llm
+extra:
+  python:
+    source: tools/get_choices.py

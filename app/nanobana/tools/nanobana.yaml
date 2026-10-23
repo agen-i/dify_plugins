@@ -1,0 +1,145 @@
+identity:
+  name: "nanobana"
+  author: "tkosht"
+  label:
+    en_US: "nanobana"
+    zh_Hans: "nanobana"
+    pt_BR: "nanobana"
+    ja_JP: "nanobana"
+description:
+  human:
+    en_US: "Generate or edit images with Gemini Nano Banana models."
+    zh_Hans: "Generate or edit images with Gemini Nano Banana models."
+    pt_BR: "Generate or edit images with Gemini Nano Banana models."
+    ja_JP: "Gemini Nano Banana モデルで画像を生成・編集します。"
+  llm: "Generate or edit images with Gemini Nano Banana models."
+parameters:
+  - name: prompt
+    type: string
+    required: true
+    label:
+      en_US: Prompt
+      zh_Hans: 查询语句
+      pt_BR: Prompt
+      ja_JP: プロンプト
+    human_description:
+      en_US: "Describe the image to generate."
+      zh_Hans: "Describe the image to generate."
+      pt_BR: "Describe the image to generate."
+      ja_JP: "生成したい画像を説明してください。"
+    llm_description: "Detailed prompt for image generation."
+    form: llm
+  - name: images
+    type: files
+    required: false
+    label:
+      ja_JP: 参照画像
+      en_US: Reference images
+    human_description:
+      ja_JP: 画像編集や参照に使う任意の画像ファイルです。
+      en_US: Optional image files for editing or visual reference.
+    llm_description: Optional image files to edit or use as references.
+    form: llm
+  - name: model
+    type: select
+    required: false
+    default: "gemini-3-pro-image"
+    label:
+      ja_JP: モデル
+      en_US: Model
+    human_description:
+      ja_JP: 使用する Gemini 画像生成モデルを指定します。
+      en_US: Select the Gemini image generation model.
+    llm_description: Gemini image generation model.
+    form: form
+    options:
+      - value: "gemini-3-pro-image"
+        label:
+          ja_JP: "gemini-3-pro-image"
+          en_US: "gemini-3-pro-image"
+      - value: "gemini-3.1-flash-image"
+        label:
+          ja_JP: "gemini-3.1-flash-image"
+          en_US: "gemini-3.1-flash-image"
+  - name: aspect_ratio
+    type: select
+    required: false
+    default: "1:1"
+    label:
+      ja_JP: アスペクト比
+      en_US: Aspect ratio
+    human_description:
+      ja_JP: 生成する画像の縦横比を指定します。
+      en_US: Aspect ratio of the generated image.
+    llm_description: Aspect ratio for the generated image, such as 1:1 or 16:9.
+    form: form
+    options:
+      - value: "1:1"
+        label:
+          ja_JP: "1:1"
+          en_US: "1:1"
+      - value: "3:2"
+        label:
+          ja_JP: "3:2"
+          en_US: "3:2"
+      - value: "2:3"
+        label:
+          ja_JP: "2:3"
+          en_US: "2:3"
+      - value: "3:4"
+        label:
+          ja_JP: "3:4"
+          en_US: "3:4"
+      - value: "4:3"
+        label:
+          ja_JP: "4:3"
+          en_US: "4:3"
+      - value: "4:5"
+        label:
+          ja_JP: "4:5"
+          en_US: "4:5"
+      - value: "5:4"
+        label:
+          ja_JP: "5:4"
+          en_US: "5:4"
+      - value: "9:16"
+        label:
+          ja_JP: "9:16"
+          en_US: "9:16"
+      - value: "16:9"
+        label:
+          ja_JP: "16:9"
+          en_US: "16:9"
+      - value: "21:9"
+        label:
+          ja_JP: "21:9"
+          en_US: "21:9"
+
+  - name: resolution
+    type: select
+    required: false
+    default: "1K"
+    label:
+      ja_JP: 解像度
+      en_US: Resolution
+    human_description:
+      ja_JP: 生成する画像の解像度を指定します。Pro 前提の workflow では 1K、2K、4K を使用してください。
+      en_US: Resolution of the generated image. For Pro-first workflows, use 1K, 2K, or 4K.
+    llm_description: Resolution of the generated image. Pro-first workflows should use 1K, 2K, or 4K.
+    form: form
+    options:
+      - value: "1K"
+        label:
+          ja_JP: "1K"
+          en_US: "1K"
+      - value: "2K"
+        label:
+          ja_JP: "2K"
+          en_US: "2K"
+      - value: "4K"
+        label:
+          ja_JP: "4K"
+          en_US: "4K"
+extra:
+  python:
+    source: tools/nanobana.py

@@ -1,0 +1,40 @@
+identity:
+  name: pdf_text_pages
+  author: tkosht
+  label:
+    en_US: PDF Text and Pages
+    ja_JP: PDF本文・ページ画像
+description:
+  human:
+    en_US: Convert PDFs to completed text and all page images; pass other files through unchanged in input order.
+    ja_JP: PDFから本文と全ページ画像を生成し、その他のファイルは元のまま入力順に返します。
+  llm: Convert PDF extensions to text and all page images with matching visible page IDs. Pass other files through unchanged; text contains only PDFs.
+parameters:
+  - name: pdf_files
+    type: files
+    required: false
+    label:
+      en_US: File list
+      ja_JP: ファイルリスト
+    human_description:
+      en_US: Select sys.files, another File list, or a single File variable. Order and duplicates are kept; empty is allowed.
+      ja_JP: sys.files・任意のFileリスト・単一File変数を指定します。順序と重複を保持し、0件も受け付けます。
+    llm_description: File list in original order. PDFs become text and all page images; other files pass through unchanged. Empty input returns empty outputs.
+    form: llm
+  - name: dpi
+    type: number
+    required: false
+    default: 150
+    min: 36
+    max: 200
+    label:
+      en_US: Image DPI
+      ja_JP: 画像解像度（DPI）
+    human_description:
+      en_US: Resolution, subject to administrator limits.
+      ja_JP: 管理者上限以内の画像解像度です。
+    llm_description: Image DPI, 150 by default.
+    form: form
+extra:
+  python:
+    source: tools/pdf_text_pages.py

@@ -1,0 +1,4 @@
+Name: python-dotenv
+Version: 1.2.4
+License: BSD-3-Clause
+Project-URL: ['Source, https://github.com/theskumar/python-dotenv']

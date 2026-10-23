@@ -1,0 +1,4 @@
+Name: Werkzeug
+Version: 3.1.9
+License: BSD-3-Clause
+Project-URL: ['Changes, https://werkzeug.palletsprojects.com/page/changes/', 'Chat, https://discord.gg/pallets', 'Documentation, https://werkzeug.palletsprojects.com/', 'Donate, https://palletsprojects.com/donate', 'Source, https://github.com/pallets/werkzeug/']

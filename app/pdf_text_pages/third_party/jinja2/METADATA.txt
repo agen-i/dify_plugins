@@ -1,0 +1,4 @@
+Name: Jinja2
+Version: 3.1.6
+License: See wheel metadata/licenses
+Project-URL: ['Changes, https://jinja.palletsprojects.com/changes/', 'Chat, https://discord.gg/pallets', 'Documentation, https://jinja.palletsprojects.com/', 'Donate, https://palletsprojects.com/donate', 'Source, https://github.com/pallets/jinja/']

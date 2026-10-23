@@ -1,0 +1,47 @@
+identity:
+  name: sharepoint_list_update_item
+  author: tkosht
+  label:
+    en_US: Update List Item
+    ja_JP: リストアイテム更新
+description:
+  human:
+    en_US: Update an existing SharePoint list item
+    ja_JP: SharePoint リストの既存アイテムを更新します
+  llm: Update a SharePoint list item
+parameters:
+  - name: list_url
+    type: string
+    required: true
+    label:
+      en_US: List URL
+      ja_JP: リストURL
+    human_description:
+      en_US: "SharePoint list URL (e.g., https://contoso.sharepoint.com/sites/demo/Lists/MyList/AllItems.aspx)"
+      ja_JP: "SharePoint リストの URL（例: https://contoso.sharepoint.com/sites/demo/Lists/MyList/AllItems.aspx）"
+    llm_description: SharePoint list URL (AllItems.aspx)
+    form: llm
+  - name: item_id
+    type: string
+    required: true
+    label:
+      en_US: Item ID
+      ja_JP: アイテムID
+    human_description:
+      en_US: ID of the item to update
+      ja_JP: 更新するアイテムのID
+    form: llm
+  - name: fields_json
+    type: string
+    required: true
+    label:
+      en_US: Fields (JSON)
+      ja_JP: フィールド（JSON）
+    human_description:
+      en_US: 'JSON object of field internal names to values. Example: {"Title": "Updated"}'
+      ja_JP: 'フィールド内部名と値のJSON。例: {"Title": "Updated"}'
+    llm_description: JSON object mapping SharePoint internal field names to updated values
+    form: llm
+extra:
+  python:
+    source: tools/update_item.py

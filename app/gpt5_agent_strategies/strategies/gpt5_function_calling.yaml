@@ -1,0 +1,208 @@
+identity:
+  name: gpt5_function_calling
+  author: tkosht
+  label:
+    en_US: GPT-5 Function Calling
+    ja_JP: GPT-5 Function Calling
+description:
+  en_US: GPT-5 optimized function-calling strategy
+  ja_JP: GPT-5 最適化の Function Calling 戦略
+features:
+  - history-messages
+parameters:
+  - name: model
+    type: model-selector
+    scope: tool-call&llm
+    required: true
+    label:
+      en_US: Model
+      ja_JP: モデル
+    help:
+      en_US: |
+        LLM used by this strategy.
+        Select a model/provider that supports tool calling in your environment.
+      ja_JP: |
+        この strategy で使用する LLM です。
+        利用環境で tool calling に対応したモデル/プロバイダーを選択してください。
+  - name: tools
+    type: array[tools]
+    required: true
+    label:
+      en_US: Tool list
+      ja_JP: ツール一覧
+    help:
+      en_US: |
+        Tools available to the agent during execution.
+        If no suitable tool is available, the agent will respond using model output only.
+      ja_JP: |
+        実行中に Agent が呼び出せるツール一覧です。
+        適切なツールがない場合は、モデル出力のみで回答します。
+  - name: instruction
+    type: string
+    required: true
+    label:
+      en_US: Instruction
+      ja_JP: 指示
+    help:
+      en_US: |
+        Base instruction for this run.
+        This is combined with built-in prompt policies and runtime inputs (query/context).
+      ja_JP: |
+        この実行のベース指示です。
+        組み込みポリシーおよび実行時入力（query/context）と合成して使用されます。
+    auto_generate:
+      type: prompt_instruction
+    template:
+      enabled: true
+  - name: prompt_policy_overrides
+    type: string
+    required: false
+    label:
+      en_US: Prompt Policy Overrides
+      ja_JP: プロンプトポリシー上書き
+    help:
+      en_US: |
+        Optional prompt policy customization.
+        - Plain text: appended as extra policy.
+        - JSON: override only these keys:
+          persistence_policy, context_gathering_policy, uncertainty_policy, tool_preamble_policy, extra_policy
+        - You do NOT need to write XML-like tags.
+          Tags are added automatically for persistence/context_gathering/uncertainty/tool_preamble.
+        - Note: context_gathering_policy is a system-prompt policy block.
+                It is different from the strategy "context" parameter (runtime context data).
+        - Unknown JSON keys are ignored.
+        JSON example:
+        {
+          "persistence_policy": "- Continue until task completion.",
+          "context_gathering_policy": "- Search broadly, then narrow quickly.",
+          "uncertainty_policy": "- State assumptions explicitly.",
+          "tool_preamble_policy": "- Before calling tools, emit <think> in Japanese.",
+          "extra_policy": "- Keep final answers concise in Japanese."
+        }
+      ja_JP: |
+        任意のプロンプトポリシー上書きです。
+        - プレーンテキスト: 追加ポリシーとして末尾に追記
+        - JSON: 次のキーのみ上書き可能
+          persistence_policy, context_gathering_policy, uncertainty_policy, tool_preamble_policy, extra_policy
+        - XML風タグ（<persistence> など）の記載は不要です。
+          persistence/context_gathering/uncertainty/tool_preamble は内部で自動的にタグ付与します。
+        - context_gathering_policy は system prompt 内のポリシーブロックです。
+          strategy の "context" パラメータ（実行時コンテキストデータ）とは別物です。
+        - 未知の JSON キーは無視されます。
+        JSON 例:
+        {
+          "persistence_policy": "- タスク完了まで継続します。",
+          "context_gathering_policy": "- まず広く確認し、その後に絞り込みます。",
+          "uncertainty_policy": "- 前提は明示して進めます。",
+          "tool_preamble_policy": "- ツール呼び出し前に <think> を日本語で出力してください。",
+          "extra_policy": "- 最終回答は日本語で簡潔に。"
+        }
+    placeholder:
+      en_US: |
+        {
+          "tool_preamble_policy": "- Before calling tools, emit <think> in Japanese.",
+          "extra_policy": "- Keep final answers concise in Japanese."
+        }
+      ja_JP: |
+        {
+          "tool_preamble_policy": "- ツール呼び出し前に <think> を日本語で出力してください。",
+          "extra_policy": "- 最終回答は日本語で簡潔に。"
+        }
+    template:
+      enabled: true
+  - name: context
+    type: any
+    scope: array[object]
+    required: false
+    label:
+      en_US: Context
+      ja_JP: コンテキスト
+    help:
+      en_US: |
+        Runtime context data (structured objects) passed to the strategy.
+        This is different from "context_gathering_policy", which is a system-prompt policy block.
+      ja_JP: |
+        strategy に渡す実行時コンテキストデータ（構造化オブジェクト）です。
+        system prompt の方針ブロックである "context_gathering_policy" とは別物です。
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query
+      ja_JP: クエリ
+    help:
+      en_US: |
+        Primary user query for this agent turn.
+        The final answer is generated against this query and available context/tools.
+      ja_JP: |
+        この Agent ターンで処理する主質問です。
+        利用可能な context/tools と合わせて最終回答を生成します。
+  - name: maximum_iterations
+    type: number
+    required: true
+    default: 6
+    min: 1
+    max: 30
+    label:
+      en_US: Maximum Iterations
+      ja_JP: 最大反復回数
+    help:
+      en_US: |
+        Upper bound of tool-call loops per turn.
+        Lower values reduce latency but may stop before enough evidence is gathered.
+      ja_JP: |
+        1ターン内のツール呼び出しループ上限です。
+        小さすぎると探索不足になり、大きすぎると応答遅延が増える可能性があります。
+  - name: invocation_timeout_seconds
+    type: number
+    required: false
+    default: 1200
+    min: 60
+    max: 1800
+    label:
+      en_US: Invocation Timeout Seconds
+      ja_JP: 内部呼び出しタイムアウト（秒）
+    help:
+      en_US: |
+        Timeout for inner backwards invocations made by this strategy.
+        This controls strategy-internal model/tool waits and is separate from the plugin process timeout.
+      ja_JP: |
+        この strategy が内部で行う backwards invocation の待機時間です。
+        model/tool の内部待機に効き、plugin process 全体の timeout とは別レイヤーです。
+  - name: emit_intermediate_thoughts
+    type: boolean
+    required: false
+    default: false
+    label:
+      en_US: Show Intermediate Thoughts
+      ja_JP: 中間思考の表示
+    help:
+      en_US: |
+        Default is false.
+        true: emit intermediate <think> blocks during execution.
+        false: hide intermediate thoughts and output only user-facing content.
+      ja_JP: |
+        デフォルトは false です。
+        true: 実行中に中間 <think> ブロックを表示します。
+        false: 中間思考は表示せず、ユーザー向け出力のみ返します。
+  - name: allow_schemaless_tool_args
+    type: boolean
+    required: false
+    default: false
+    label:
+      en_US: Allow Schemaless Tool Args
+      ja_JP: スキーマ未定義ツール引数の許可
+    help:
+      en_US: |
+        Default is false (recommended).
+        false: fail-closed when tool schema is missing and LLM provides tool-call arguments.
+        true: allow tool-call arguments even if schema is missing (compatibility fallback).
+        Note: this override is effective only when GPT5_AGENT_ALLOW_SCHEMELESS_OVERRIDE=true.
+      ja_JP: |
+        デフォルトは false（推奨）です。
+        false: ツールスキーマ未定義で LLM が引数を返した場合は fail-closed で拒否します。
+        true: スキーマ未定義でも引数を許可します（互換性のためのフォールバック）。
+        注記: この上書きは GPT5_AGENT_ALLOW_SCHEMELESS_OVERRIDE=true の場合のみ有効です。
+extra:
+  python:
+    source: strategies/gpt5_function_calling.py

@@ -1,0 +1,132 @@
+model: gpt-5.4-pro
+label:
+  en_US: gpt-5.4-pro
+  ja_JP: gpt-5.4-pro
+model_type: llm
+features:
+  - tool-call
+  - multi-tool-call
+  - agent-thought
+  - stream-tool-call
+model_properties:
+  mode: chat
+  context_size: 400000
+parameter_rules:
+  - name: max_output_tokens
+    label:
+      en_US: Max Output Tokens
+      ja_JP: 最大出力トークン
+    help:
+      en_US: Maximum number of tokens to generate in the response.
+      ja_JP: 応答として生成する最大トークン数。
+    type: int
+    required: false
+    default: 8192
+    min: 1
+    max: 128000
+  - name: reasoning_effort
+    label:
+      en_US: Reasoning Effort
+      ja_JP: 推論強度
+    help:
+      en_US: Reasoning effort level for the model.
+      ja_JP: モデルの推論強度レベル。
+    type: string
+    required: false
+    default: medium
+    options:
+      - none
+      - minimal
+      - low
+      - medium
+      - high
+      - xhigh
+  - name: reasoning_summary
+    label:
+      en_US: Reasoning Summary
+      ja_JP: 推論サマリー
+    help:
+      en_US: Summary level for model reasoning output.
+      ja_JP: モデル推論出力のサマリー粒度。
+    type: string
+    required: false
+    default: auto
+    options:
+      - auto
+      - concise
+      - detailed
+  - name: verbosity
+    label:
+      en_US: Verbosity
+      ja_JP: 冗長度
+    help:
+      en_US: Verbosity of the text response.
+      ja_JP: テキスト応答の冗長度。
+    type: string
+    required: false
+    default: medium
+    options:
+      - low
+      - medium
+      - high
+  - name: response_format
+    label:
+      en_US: Response Format
+      ja_JP: 出力フォーマット
+    help:
+      en_US: Response output format.
+      ja_JP: 応答の出力フォーマット。
+    type: string
+    required: false
+    default: text
+    options:
+      - text
+      - json_schema
+  - name: json_schema
+    label:
+      en_US: JSON Schema
+      ja_JP: JSON スキーマ
+    help:
+      en_US: JSON Schema used when response_format is json_schema.
+      ja_JP: response_format が json_schema のときに使う JSON スキーマ。
+    type: text
+    required: false
+  - name: tool_choice
+    label:
+      en_US: Tool Choice
+      ja_JP: ツール選択
+    help:
+      en_US: Tool selection policy.
+      ja_JP: ツール選択ポリシー。
+    type: string
+    required: false
+    default: auto
+    options:
+      - auto
+      - none
+      - required
+  - name: parallel_tool_calls
+    label:
+      en_US: Parallel Tool Calls
+      ja_JP: 並列ツール呼び出し
+    help:
+      en_US: Allow multiple tool calls in parallel.
+      ja_JP: 複数ツールの並列呼び出しを許可。
+    type: boolean
+    required: false
+    default: true
+  - name: enable_stream
+    label:
+      en_US: Streaming
+      ja_JP: ストリーミング
+    help:
+      en_US: Enable streaming response.
+      ja_JP: ストリーミング応答を有効化。
+    type: boolean
+    required: false
+    default: true
+pricing:
+  input: "0"
+  output: "0"
+  unit: "0.000001"
+  currency: USD

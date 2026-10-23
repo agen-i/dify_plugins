@@ -1,0 +1,4 @@
+Name: packaging
+Version: 26.3
+License: Apache-2.0 OR BSD-2-Clause
+Project-URL: ['Documentation, https://packaging.pypa.io/', 'Source, https://github.com/pypa/packaging']

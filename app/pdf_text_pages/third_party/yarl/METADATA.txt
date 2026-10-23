@@ -1,0 +1,4 @@
+Name: yarl
+Version: 1.25.1
+License: Apache-2.0
+Project-URL: ['Chat: Matrix, https://matrix.to/#/#aio-libs:matrix.org', 'Chat: Matrix Space, https://matrix.to/#/#aio-libs-space:matrix.org', 'CI: GitHub Workflows, https://github.com/aio-libs/yarl/actions?query=branch:master', 'Code of Conduct, https://github.com/aio-libs/.github/blob/master/CODE_OF_CONDUCT.md', 'Coverage: codecov, https://codecov.io/github/aio-libs/yarl', 'Docs: Changelog, https://yarl.aio-libs.org/en/latest/changes/', 'Docs: RTD, https://yarl.aio-libs.org', 'GitHub: issues, https://github.com/aio-libs/yarl/issues', 'GitHub: repo, https://github.com/aio-libs/yarl']

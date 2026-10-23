@@ -1,0 +1,4 @@
+Name: annotated-types
+Version: 0.8.0
+License: MIT
+Project-URL: ['Homepage, https://github.com/annotated-types/annotated-types', 'Source, https://github.com/annotated-types/annotated-types', 'Changelog, https://github.com/annotated-types/annotated-types/releases']

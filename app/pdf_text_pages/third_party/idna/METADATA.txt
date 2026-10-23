@@ -1,0 +1,4 @@
+Name: idna
+Version: 3.20
+License: BSD-3-Clause
+Project-URL: ['Changelog, https://github.com/kjd/idna/blob/master/HISTORY.md', 'Issue tracker, https://github.com/kjd/idna/issues', 'Source, https://github.com/kjd/idna']

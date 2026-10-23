@@ -1,0 +1,10 @@
+.venv/
+.local-bin/
+.scaffold/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.env
+.env.*
+!.env.example

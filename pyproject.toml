@@ -1,0 +1,14 @@
+[project]
+name = "agen-i-dify-plugins"
+version = "0.1.0"
+description = "Independent copy of reusable Dify plugins"
+requires-python = ">=3.12,<3.13"
+dependencies = []
+[dependency-groups]
+dev = ["black", "ruff"]
+[tool.uv]
+package = false
+[tool.black]
+line-length = 79
+[tool.ruff.lint]
+select = ["F"]

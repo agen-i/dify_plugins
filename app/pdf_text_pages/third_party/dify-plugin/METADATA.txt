@@ -1,0 +1,4 @@
+Name: dify-plugin
+Version: 0.10.2
+License: Apache-2.0
+Project-URL: ['source, https://github.com/langgenius/dify-plugin-sdks', 'homepage, https://github.com/langgenius/dify-plugin-sdks', 'issues, https://github.com/langgenius/dify-plugin-sdks/issues']

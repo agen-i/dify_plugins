@@ -1,0 +1,4 @@
+Name: greenlet
+Version: 3.5.6
+License: MIT AND PSF-2.0
+Project-URL: ['Homepage, https://greenlet.readthedocs.io', 'Documentation, https://greenlet.readthedocs.io', 'Repository, https://github.com/python-greenlet/greenlet', 'Issues, https://github.com/python-greenlet/greenlet/issues', 'Changelog, https://greenlet.readthedocs.io/en/latest/changes.html']

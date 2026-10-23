@@ -1,0 +1,4 @@
+Name: regex
+Version: 2026.9.29
+License: Apache-2.0 AND CNRI-Python
+Project-URL: ['Homepage, https://github.com/mrabarnett/mrab-regex']

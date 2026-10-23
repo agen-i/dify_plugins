@@ -1,0 +1,4 @@
+Name: blinker
+Version: 1.9.0
+License: See wheel metadata/licenses
+Project-URL: ['Chat, https://discord.gg/pallets', 'Documentation, https://blinker.readthedocs.io', 'Source, https://github.com/pallets-eco/blinker/']

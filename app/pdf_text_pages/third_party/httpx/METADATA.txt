@@ -1,0 +1,4 @@
+Name: httpx
+Version: 0.28.1
+License: BSD-3-Clause
+Project-URL: ['Changelog, https://github.com/encode/httpx/blob/master/CHANGELOG.md', 'Documentation, https://www.python-httpx.org', 'Homepage, https://github.com/encode/httpx', 'Source, https://github.com/encode/httpx']

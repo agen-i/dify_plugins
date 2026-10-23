@@ -1,0 +1,4 @@
+Name: multidict
+Version: 7.0.0
+License: Apache License 2.0
+Project-URL: ['Chat: Matrix, https://matrix.to/#/#aio-libs:matrix.org', 'Chat: Matrix Space, https://matrix.to/#/#aio-libs-space:matrix.org', 'CI: GitHub, https://github.com/aio-libs/multidict/actions', 'Code of Conduct, https://github.com/aio-libs/.github/blob/master/CODE_OF_CONDUCT.md', 'Coverage: codecov, https://codecov.io/github/aio-libs/multidict', 'Docs: Changelog, https://multidict.aio-libs.org/en/latest/changes/', 'Docs: RTD, https://multidict.aio-libs.org', 'GitHub: issues, https://github.com/aio-libs/multidict/issues', 'GitHub: repo, https://github.com/aio-libs/multidict']

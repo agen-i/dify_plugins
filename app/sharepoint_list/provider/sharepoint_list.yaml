@@ -1,0 +1,65 @@
+oauth_schema:
+  client_schema:
+    - name: "client_id"
+      type: "secret-input"
+      required: true
+      label:
+        en_US: "Client ID"
+        ja_JP: "クライアントID"
+    - name: "client_secret"
+      type: "secret-input"
+      required: true
+      label:
+        en_US: "Client Secret"
+        ja_JP: "クライアントシークレット"
+      help:
+        en_US: "Get this from Azure AD App registration (App registration -> Certificates & secrets)."
+        ja_JP: "Azure AD のアプリ登録（証明書とシークレット）で取得してください。"
+      url: https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade
+    - name: "tenant_id"
+      type: "text-input"
+      required: false
+      label:
+        en_US: "Tenant ID or domain (optional)"
+        ja_JP: "テナントIDまたはドメイン（任意）"
+      help:
+        en_US: "Set for single-tenant apps. Example: contoso.onmicrosoft.com or your Directory (tenant) ID. If empty, 'common' is used."
+        ja_JP: "シングルテナントの場合に設定します。例: contoso.onmicrosoft.com または Directory (tenant) ID。未指定時は common を使用します。"
+  credentials_schema:
+    - name: "access_token"
+      type: "secret-input"
+      label:
+        en_US: "Access Token"
+        ja_JP: "アクセス トークン"
+    - name: "refresh_token"
+      type: "secret-input"
+      label:
+        en_US: "Refresh Token"
+        ja_JP: "リフレッシュ トークン"
+    - name: "expires_at"
+      type: "secret-input"
+      label:
+        en_US: "Expires At"
+        ja_JP: "有効期限"
+
+identity:
+  author: "tkosht"
+  name: "sharepoint_list"
+  label:
+    en_US: "SharePoint List"
+    ja_JP: "SharePoint リスト"
+  description:
+    en_US: "Manage SharePoint list items (create/update/read) via Microsoft Graph"
+    ja_JP: "Microsoft Graph 経由で SharePoint リストのアイテムを作成・更新・参照します"
+  icon: "icon.svg"
+
+tools:
+  - tools/create_item.yaml
+  - tools/update_item.yaml
+  - tools/get_item.yaml
+  - tools/list_items.yaml
+  - tools/get_choices.yaml
+
+extra:
+  python:
+    source: provider/sharepoint_list.py

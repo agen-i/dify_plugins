@@ -1,0 +1,110 @@
+provider: openai_gpt5_responses
+label:
+  en_US: OpenAI GPT-5 Responses
+  ja_JP: OpenAI GPT-5 Responses
+description:
+  en_US: OpenAI GPT-5 provider based on Responses API.
+icon_small:
+  en_US: icon.svg
+icon_large:
+  en_US: icon.svg
+background: "#E5E7EB"
+help:
+  title:
+    en_US: Get your API Key from OpenAI
+    ja_JP: OpenAI で API Key を取得
+  url:
+    en_US: https://platform.openai.com/api-keys
+    ja_JP: https://platform.openai.com/api-keys
+supported_model_types:
+  - llm
+configurate_methods:
+  - predefined-model
+  - customizable-model
+model_credential_schema:
+  model:
+    label:
+      en_US: Model Name
+      ja_JP: モデル名
+    placeholder:
+      en_US: Enter your model name
+      ja_JP: モデル名を入力してください
+  credential_form_schemas:
+    - variable: openai_api_key
+      label:
+        en_US: API Key
+        ja_JP: API キー
+      type: secret-input
+      required: true
+    - variable: openai_organization
+      label:
+        en_US: Organization ID
+        ja_JP: Organization ID
+      type: text-input
+      required: false
+    - variable: openai_api_base
+      label:
+        en_US: API Base
+        ja_JP: API Base
+      type: text-input
+      required: false
+      default: ""
+    - variable: request_timeout_seconds
+      label:
+        en_US: Request Timeout Seconds
+        ja_JP: リクエストタイムアウト（秒）
+      type: text-input
+      required: false
+      default: "600"
+    - variable: max_retries
+      label:
+        en_US: Max Retries
+        ja_JP: 最大リトライ回数
+      type: text-input
+      required: false
+      default: "1"
+provider_credential_schema:
+  credential_form_schemas:
+    - variable: openai_api_key
+      label:
+        en_US: API Key
+        ja_JP: API キー
+      type: secret-input
+      required: true
+    - variable: openai_organization
+      label:
+        en_US: Organization ID
+        ja_JP: Organization ID
+      type: text-input
+      required: false
+    - variable: openai_api_base
+      label:
+        en_US: API Base
+        ja_JP: API Base
+      type: text-input
+      required: false
+      default: ""
+    - variable: request_timeout_seconds
+      label:
+        en_US: Request Timeout Seconds
+        ja_JP: リクエストタイムアウト（秒）
+      type: text-input
+      required: false
+      default: "600"
+    - variable: max_retries
+      label:
+        en_US: Max Retries
+        ja_JP: 最大リトライ回数
+      type: text-input
+      required: false
+      default: "1"
+models:
+  llm:
+    predefined:
+      - "models/llm/*.yaml"
+    position: "models/llm/_position.yaml"
+extra:
+  python:
+    provider_source: provider/openai_gpt5.py
+    model_sources:
+      - "models/llm/llm.py"

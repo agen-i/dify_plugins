@@ -1,0 +1,18 @@
+........................................................................ [ 52%]
+..................................................................       [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/dify_plugin/_gevent.py:4
+  /home/devuser/workspace/dify_plugins/app/pdf_text_pages/.venv/lib/python3.12/site-packages/dify_plugin/_gevent.py:4: MonkeyPatchWarning: Monkey-patching ssl after ssl has already been imported may lead to errors, including RecursionError on Python 3.6. It may also silently lead to incorrect behaviour on Python 3.7. Please monkey-patch earlier. See https://github.com/gevent/gevent/issues/1016. Modules that had direct imports (NOT patched): ['anyio.streams.tls (/home/devuser/workspace/dify_plugins/app/pdf_text_pages/.venv/lib/python3.12/site-packages/anyio/streams/tls.py)']. 
+    monkey.patch_all(sys=True)
+
+.venv/lib/python3.12/site-packages/dify_plugin/entities/provider_config.py:89
+  /home/devuser/workspace/dify_plugins/app/pdf_text_pages/.venv/lib/python3.12/site-packages/dify_plugin/entities/provider_config.py:89: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.13/migration/
+    class ProviderConfig(BaseModel):
+
+tests/test_fetch_adapter.py: 8 warnings
+tests/test_fetch_diagnostics.py: 2 warnings
+  /home/devuser/workspace/dify_plugins/app/pdf_text_pages/.venv/lib/python3.12/site-packages/gevent/os.py:564: DeprecationWarning: This process (pid=677257) is multi-threaded, use of fork() may lead to deadlocks in the child.
+    pid = fork()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+138 passed, 12 warnings in 25.08s

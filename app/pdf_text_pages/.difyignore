@@ -1,0 +1,12 @@
+.venv/
+.local-bin/
+.scaffold/
+.git/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+dist/
+*.difypkg
+.env
+.env.*

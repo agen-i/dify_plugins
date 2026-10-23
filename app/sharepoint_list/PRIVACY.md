@@ -1,0 +1,2 @@
+This plugin does not log or persist user data beyond what is necessary for runtime execution. Access tokens are obtained via OAuth and kept within Dify's credential store; the plugin does not transmit secrets elsewhere.
+When `SHAREPOINT_LIST_DEBUG_LOG=1` is enabled, it emits structured debug logs through Dify's plugin logging path. These logs can include request metadata such as filter expressions, field names, and paging parameters. Authorization headers and tokens are not logged. `SHAREPOINT_LIST_DEBUG_LOG_PATH` is deprecated and ignored.

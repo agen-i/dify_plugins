@@ -1,0 +1,4 @@
+Name: typing_extensions
+Version: 4.16.0
+License: PSF-2.0
+Project-URL: ['Bug Tracker, https://github.com/python/typing_extensions/issues', 'Changes, https://github.com/python/typing_extensions/blob/main/CHANGELOG.md', 'Documentation, https://typing-extensions.readthedocs.io/', 'Home, https://github.com/python/typing_extensions', 'Q & A, https://github.com/python/typing/discussions', 'Repository, https://github.com/python/typing_extensions']

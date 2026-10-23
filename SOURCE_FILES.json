@@ -1,0 +1,1200 @@
+[
+  {
+    "upstream": "dify_plugins",
+    "commit": "2388e1b94dada49286e28b468e5e15dec473efb8",
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "812bf1cf9e42f990de3ab9b1ddc328efb9ae48bd2f0909176eba9c59182d029c"
+      },
+      {
+        "path": "app/.gitkeep",
+        "sha256": "6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167"
+      },
+      {
+        "path": "app/__init__.py",
+        "sha256": "a55b93199800b2ce070fab23c25c8c719fb74f49c4d8b9a9c3ee4679d889a6d1"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/PRIVACY.md",
+        "sha256": "886a8d58cc511bce6fffa0c2f3db9713a570c107c0cfe8ea960f94485f229160"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/README.md",
+        "sha256": "cdfeb3d8b04d8ba427b206cb8a162c37f143af6dd7f94b3092864781c145de6e"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/__init__.py",
+        "sha256": "36ca73ad2f6843a4a98b2245a5a65de19c08739f64b5b9e1020e8933624109e3"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/_assets/icon.svg",
+        "sha256": "8fc07511756c6f5dc221331e26a8acca4c827682cc24936b26ce5b40d4e32426"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/icon.svg",
+        "sha256": "8fc07511756c6f5dc221331e26a8acca4c827682cc24936b26ce5b40d4e32426"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/internal/__init__.py",
+        "sha256": "814a08493f635eda099dca5afb384187c219d017a117521190bf595d8c8d92d8"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/internal/flow.py",
+        "sha256": "6aaaa1391f1cfc42ab950d1b8329841c6d52887624801670e947747f74de5d8c"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/internal/loop.py",
+        "sha256": "01aa860214091b6dff7236f7afc502c82da19cc6245015856449e9052846fd81"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/internal/policy.py",
+        "sha256": "d1e4c03aac54ea5efec866fbfd93d8219115db4600daad2e2c7ef8f56dba3675"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/internal/tooling.py",
+        "sha256": "5605424300b6bf81140e61155f5f06cea392df3917c673809639aea19b843792"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/main.py",
+        "sha256": "7fd246e810ac6dd209d39a0bcc9c82da122ca0ab681e7f91de35fa816b513c97"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/manifest.yaml",
+        "sha256": "01e3de44a1c7e2b0cdab7977e69cba11b5f8af64f0066689ce9e33fc3cf23df4"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/prompt/__init__.py",
+        "sha256": "0ea89c7c6427536224de726907bb5b5cddea85b84bd27bb3e3a4dc77bac3fc81"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/prompt/template.py",
+        "sha256": "c079b6bc2839b380c9040978b914a37511c90380987992b5b296ece0affde863"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/provider/__init__.py",
+        "sha256": "6ad66c96328941c8e57a08be4db29f702ca537df9da9435d87855f52fcebd208"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/provider/gpt5_agent.py",
+        "sha256": "e310fdadfb81e9c9f31ba86443fc5961f439c3383709cc80105319af88dff7a6"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/provider/gpt5_agent.yaml",
+        "sha256": "56083fcdafc13557bd10c71cbd656e7ca2e127990d05954bf23282188960bd9c"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/requirements.txt",
+        "sha256": "b2c0350aca8243587132f6ee39fc0ee331ce3b654640f84cb30000cf4590bc29"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/strategies/__init__.py",
+        "sha256": "32e1cdc8fcfcdf4c1776b73ac30f9539ea1a3bc16cf7ea304bd3fc88c23e9099"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/strategies/gpt5_function_calling.py",
+        "sha256": "7d2cc9d9759576157a508ca30765cbeb0f3c57008da7670b93decc7813b96cb4"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/strategies/gpt5_function_calling.yaml",
+        "sha256": "aab520d9fa9f99e18c2b268fb4a40fca314f1ea05ab80cc4e4c2322fd22dc333"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/strategies/gpt5_react.py",
+        "sha256": "aea5ade34f81aa1975a846e513fcf7209da04ed4c79d0fe53f614e072b338c66"
+      },
+      {
+        "path": "app/gpt5_agent_strategies/strategies/gpt5_react.yaml",
+        "sha256": "7c8e4630ee9307b85130829fd1b8d3ba92325d36569466c687315afd1681a458"
+      },
+      {
+        "path": "app/nanobana/.difyignore",
+        "sha256": "835e8cbc54bee4048184c8c564ebbf1ea760691d9818ed92a7912c286b8df9b4"
+      },
+      {
+        "path": "app/nanobana/.gitignore",
+        "sha256": "17449c0add59be88f5bf430babb11d6a6437441501ac66ba1ab53b5dbc68af83"
+      },
+      {
+        "path": "app/nanobana/GUIDE.md",
+        "sha256": "e3d00055858a408680c22cd4e439d3cdd456d1fea9cd86caaab63f785d021990"
+      },
+      {
+        "path": "app/nanobana/PRIVACY.md",
+        "sha256": "72c9c25b19316afa9c2e7ac7897b86cceadcaecd77cde7f01be875b856f53b58"
+      },
+      {
+        "path": "app/nanobana/README.md",
+        "sha256": "e263927ea4f7681ff0bec10dd13638236fcc8b6bd0041be25f11c0676d023e04"
+      },
+      {
+        "path": "app/nanobana/_assets/icon-dark.svg",
+        "sha256": "e85c13771e6288ec8f169585d71ad85a582fe2ba05ef641a594c54a856d6b0e0"
+      },
+      {
+        "path": "app/nanobana/_assets/icon.svg",
+        "sha256": "d3becf3331b0cacbd5e876ed7a591c47338f9d66ac0234b360cd9b03012b47a9"
+      },
+      {
+        "path": "app/nanobana/internal/__init__.py",
+        "sha256": "d0684604eb044beab8d6669a5e1a3a49c8b58088fe1ebca707f3069328099934"
+      },
+      {
+        "path": "app/nanobana/internal/auth.py",
+        "sha256": "97fe055bf233f7ccb2fb190e8d7fdafbd05a26ec13acc9ff5f174031adc25bed"
+      },
+      {
+        "path": "app/nanobana/main.py",
+        "sha256": "feb5e5231aa87ed8185479ff31567e02ea86856279a593fe283ac7029e0a9f9d"
+      },
+      {
+        "path": "app/nanobana/manifest.yaml",
+        "sha256": "5a6e490a9a30d3dc5910638a2741e2cbc39989cd7452a271b8f45aecc1e21edc"
+      },
+      {
+        "path": "app/nanobana/provider/nanobana.py",
+        "sha256": "d7bd1fec302494ae0add70b3ae3f4725f150d82bc744049412dcc16f086c62a7"
+      },
+      {
+        "path": "app/nanobana/provider/nanobana.yaml",
+        "sha256": "386c399f09efe09369324930823e15cd4f71970e1ac2b2368d3eeaa726f02b21"
+      },
+      {
+        "path": "app/nanobana/readme/README_ja_JP.md",
+        "sha256": "2072939d721c3d5ac30267283cfcb0fff1f009813c3437b2e7712d2cfa985c0c"
+      },
+      {
+        "path": "app/nanobana/requirements.txt",
+        "sha256": "e88d1d3ec8b1b118667c6a7e576139308adeaad2d1a424bc0d05b9c4b0bed2fd"
+      },
+      {
+        "path": "app/nanobana/tools/nanobana.py",
+        "sha256": "e61b53849493a1d3b6583a2bd24bd34d9f5b4d2b6022722dd46e64d195a68ffa"
+      },
+      {
+        "path": "app/nanobana/tools/nanobana.yaml",
+        "sha256": "741a0af1f43b3e5b489dfb76cc407f75141df89bee4160001330741e7d8b1503"
+      },
+      {
+        "path": "app/openai_gpt5_responses/PRIVACY.md",
+        "sha256": "39530af3ec54c6856d96fe516ca9d126954f47f3f398f2426771918b28526c4b"
+      },
+      {
+        "path": "app/openai_gpt5_responses/README.md",
+        "sha256": "bbeb5ef61d3779eab513ffc3313f9ecfed98af777aeb8c40b2cc23501abc889a"
+      },
+      {
+        "path": "app/openai_gpt5_responses/__init__.py",
+        "sha256": "eccf39179d1f22b2a30db2bf77bb2408e81dc0eb607f6032eafc1da5008607b7"
+      },
+      {
+        "path": "app/openai_gpt5_responses/_assets/icon.svg",
+        "sha256": "7900d6ddd6a721bd5c6f61dc7cf33ab99f331ec53be1eb1dc203bc037c7721f5"
+      },
+      {
+        "path": "app/openai_gpt5_responses/icon.svg",
+        "sha256": "7900d6ddd6a721bd5c6f61dc7cf33ab99f331ec53be1eb1dc203bc037c7721f5"
+      },
+      {
+        "path": "app/openai_gpt5_responses/internal/__init__.py",
+        "sha256": "e29e553c23a9145ee6e50093944b197c1c78d806ce94eb50702c076afc1ba877"
+      },
+      {
+        "path": "app/openai_gpt5_responses/internal/credentials.py",
+        "sha256": "19a340cd9d56184657d0c7479870fdd2a6211df666ddb21a2fc2aae4ecf9dd09"
+      },
+      {
+        "path": "app/openai_gpt5_responses/internal/errors.py",
+        "sha256": "ab2bdf5ae4f4f9c23ee8c2f5a2a1a548cdca1554499fd00991b5e52e5526a148"
+      },
+      {
+        "path": "app/openai_gpt5_responses/internal/messages.py",
+        "sha256": "161c971223f65bf9900eec024a092a28c99748e39cc2e2721228a93f77333cf4"
+      },
+      {
+        "path": "app/openai_gpt5_responses/internal/payloads.py",
+        "sha256": "17674454662538b8f7816bb8e0e9ca7a3579cbeaa77ad3da52f70b25d01926d7"
+      },
+      {
+        "path": "app/openai_gpt5_responses/main.py",
+        "sha256": "27be01be019707f0c04cba438cdbfcb10662377a57c69b9c16213dea6389b8d8"
+      },
+      {
+        "path": "app/openai_gpt5_responses/manifest.yaml",
+        "sha256": "b764e3096f3facb7f2774c67e539c9d647efbb65b601903c1a288f15289a9166"
+      },
+      {
+        "path": "app/openai_gpt5_responses/models/__init__.py",
+        "sha256": "d802fcb8de00ce7faaca5e29a699df970470087adc80450ade865c78f6be9c5a"
+      },
+      {
+        "path": "app/openai_gpt5_responses/models/llm/__init__.py",
+        "sha256": "3b15ce21aaab2034378da2fa72263c60449fdd34b97412a2ec779c59c8e4cb79"
+      },
+      {
+        "path": "app/openai_gpt5_responses/models/llm/_position.yaml",
+        "sha256": "1daf156983d8e4ca78b5b8e9775a09a2a2a3bda93bc606293479c2da6d095b31"
+      },
+      {
+        "path": "app/openai_gpt5_responses/models/llm/gpt-5-codex.yaml",
+        "sha256": "89598d02b2ff747565cbe4cbc4b088817b771994b72165cf3e66fe8be1132bff"
+      },
+      {
+        "path": "app/openai_gpt5_responses/models/llm/gpt-5-mini.yaml",
+        "sha256": "fa1f2b66371098af65f897e1fdc8679550c5aa04797aab4a7196e89a3aa53a16"
+      },
+      {
+        "path": "app/openai_gpt5_responses/models/llm/gpt-5-nano.yaml",
+        "sha256": "cb5488de754d301153fc3a47b0adb0c6561c403fd85f118e320dbf20b4c7cdec"
+      },
+      {
+        "path": "app/openai_gpt5_responses/models/llm/gpt-5.1-codex.yaml",
+        "sha256": "f374cb1389b91a1b43e41847cc83eb94008be68c387a0d73f34fad9b357eee45"
+      },
+      {
+        "path": "app/openai_gpt5_responses/models/llm/gpt-5.2-pro.yaml",
+        "sha256": "3ea27ad643097e811a127b79b6b4eba6eaefeab2b4419e7a1eca69bc123cd371"
+      },
+      {
+        "path": "app/openai_gpt5_responses/models/llm/gpt-5.2.yaml",
+        "sha256": "5485c8804a7d2e88d51839c9eafe924b49adb250900cbd427650ae5f2cdbdedb"
+      },
+      {
+        "path": "app/openai_gpt5_responses/models/llm/gpt-5.3-codex.yaml",
+        "sha256": "55c86933896d8b3f245b4a528d42ecbe730680bfb9e29808e0cede609fb1f6c1"
+      },
+      {
+        "path": "app/openai_gpt5_responses/models/llm/gpt-5.4-pro.yaml",
+        "sha256": "92592c6bb7e69c3fbacac7cb8f7db1d13725af14b920f17e378bcbba9074faca"
+      },
+      {
+        "path": "app/openai_gpt5_responses/models/llm/gpt-5.4.yaml",
+        "sha256": "f8934ee140b10b4dfc03f01018530bc3d64a4f430c70b4376645c4f2718e0ba3"
+      },
+      {
+        "path": "app/openai_gpt5_responses/models/llm/gpt-5.yaml",
+        "sha256": "d26cf6cd1114accaa958ffb158445d8ed0fdebaaebe813a1f8578e3d286f3335"
+      },
+      {
+        "path": "app/openai_gpt5_responses/models/llm/llm.py",
+        "sha256": "037496daa03a6c1f90738c634475f4c2310ec49f47841abbf839cd8a93d7eb53"
+      },
+      {
+        "path": "app/openai_gpt5_responses/provider/__init__.py",
+        "sha256": "1cf83772fb52be38585346870d0d3e4d06ab728a33d430ef6edd01f1a273eb87"
+      },
+      {
+        "path": "app/openai_gpt5_responses/provider/openai_gpt5.py",
+        "sha256": "d026ae6c519edb1a8fddc124004d8aa7454e128ea564486c9645fc8489b6aaed"
+      },
+      {
+        "path": "app/openai_gpt5_responses/provider/openai_gpt5.yaml",
+        "sha256": "91452a7fc7412a9f2a45eec16d7cccf831f1d07d33af6724558c232116a8cccf"
+      },
+      {
+        "path": "app/openai_gpt5_responses/requirements.txt",
+        "sha256": "fdf4e46bd8415a4c710725ff26c7ccf78c9aef034bc1af750823689dc08f98aa"
+      },
+      {
+        "path": "app/pdf_text_pages/.difyignore",
+        "sha256": "145a31106904d8c18e1b06a2318d77de90d2ca269e418217b0c213e3ffcb7654"
+      },
+      {
+        "path": "app/pdf_text_pages/.gitignore",
+        "sha256": "b32975e63d63eccb9c739f4b55413ad1a0903e4bac08fcc1e923059cc3512500"
+      },
+      {
+        "path": "app/pdf_text_pages/LICENSE",
+        "sha256": "812bf1cf9e42f990de3ab9b1ddc328efb9ae48bd2f0909176eba9c59182d029c"
+      },
+      {
+        "path": "app/pdf_text_pages/PRIVACY.md",
+        "sha256": "fb9abe4961dccf1ed2e528075b03d3238973fcb58aff988e46b87aef5605a521"
+      },
+      {
+        "path": "app/pdf_text_pages/README.md",
+        "sha256": "903f958cdea9d54518b36d95fe5eed7472a0adb0b7b3ac095c5267cb16f6d366"
+      },
+      {
+        "path": "app/pdf_text_pages/SECURITY.md",
+        "sha256": "3d1e8650706bc789a5b5cbb827ff16d096f6dbee5a4b8da5576c1721ce8eb255"
+      },
+      {
+        "path": "app/pdf_text_pages/VERIFICATION.md",
+        "sha256": "d736f4d842983e290b0ab1caf6e40ea444d0ddc65e29b462f4f0355eb7941c35"
+      },
+      {
+        "path": "app/pdf_text_pages/_assets/icon.svg",
+        "sha256": "c19d0b6aafdcb70be6730ffb141d8cf12c37072cf0cacfd58a830dd148f5db25"
+      },
+      {
+        "path": "app/pdf_text_pages/config/allowed_sources.example.json",
+        "sha256": "c02517ccef5333e85083d644a29b92177f31432462c9851856684faa57a48497"
+      },
+      {
+        "path": "app/pdf_text_pages/config/debug-env.example",
+        "sha256": "d6b7b74a152c41101c8543933f32b0d4f26afd0291d3be05fe33997ebf9b782f"
+      },
+      {
+        "path": "app/pdf_text_pages/dist/BUILD_RECORD-0.1.5.json",
+        "sha256": "34cf48bc2996d7ac93e465e770061d1ffd000ee1b8444b7d584055f3bf94e748"
+      },
+      {
+        "path": "app/pdf_text_pages/dist/BUILD_RECORD-0.1.6.json",
+        "sha256": "f2da268fc56c977dbc690b0fa77199681cfb259a676ab738764baf91517b1bbe"
+      },
+      {
+        "path": "app/pdf_text_pages/dist/SOURCE_SHA256-0.1.5.txt",
+        "sha256": "9367b53d8bc672cfdd914912b5f46af3879c14421cfbe255a3c649f586f8e040"
+      },
+      {
+        "path": "app/pdf_text_pages/dist/SOURCE_SHA256-0.1.6.txt",
+        "sha256": "dddeb20324fa4dc6d8b14d56fa7b690238e73799bf196bfa2bc284daa56b63e2"
+      },
+      {
+        "path": "app/pdf_text_pages/dist/pdf_text_pages-0.1.5.difypkg",
+        "sha256": "71c497f58f4d1bdb16973d0c4db6dc90c1bcb11dc0d258907c41c09d19978340"
+      },
+      {
+        "path": "app/pdf_text_pages/dist/pdf_text_pages-0.1.6.difypkg",
+        "sha256": "bbc4a10ea00a0f57ba4da4bfb1a2a98b8e1bd35ff5fe17ffe265949998c5ac9e"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/CANDIDATE_CODE_SHA256-0.1.5.txt",
+        "sha256": "418b601ca48a971d9a537b70d2b03f8306aa2e64a666f32840554dd2a1a0642b"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/CANDIDATE_CODE_SHA256-0.1.6.txt",
+        "sha256": "24578442d2b067904b68f9e231f41423cbf37482706cec0e9d39b7d8e2c94576"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/DEPENDENCIES.md",
+        "sha256": "31323cf82c64ac680f14f881062e2aa96df4a11eefb064233c2fa697179b67b5"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/DIFY_PDF_PLUGIN_HANDOFF.md",
+        "sha256": "8eadb6987a376d5eeabb50f2e917825fb68f7cd824216c22a8d735007536ed74"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/FETCH_DIAGNOSTICS.md",
+        "sha256": "8869c22bddaecd60851213bb3c67ae9e66de1f6dd34ef0d985753d8dfe45a2e0"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/LIVE_TESTS.md",
+        "sha256": "f3427f3b645d70d1d2a2c14e6e8ffe1b9cb658d1a868de575502671ad22a6326"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/json-budget-regression.json",
+        "sha256": "0d31dd7aab940298fc2dfb3d5acf105d927d7128e548effda7c3f6f3f989ca8f"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/phase7-test-results-0.1.5.txt",
+        "sha256": "ce0cbf24ae8335054d6fa34ba54da6652237ab20344946ce47e8b3da25ab35d4"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/phase8-test-results-0.1.6.txt",
+        "sha256": "5ade6c1f02f68ff09740bdc733e2d993ef59c97b3b5087db0e5e9090b665904b"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/pip-audit.json",
+        "sha256": "1be800f51915685d62c9fe86c13699f430a74228b5289278dd2c174c74b7d6b9"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/samples/beta.pdf",
+        "sha256": "ed9ea5c1ac0ceb3f667cf7f759ce974e7aeefae619e8cbcfac15017f7e56a1aa"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/samples/label-768.png",
+        "sha256": "6e8b6cf6e1ee6d891063d8585dc4a458fb5bec8555214b7c13024b0fc1b2266f"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/samples/metadata.json",
+        "sha256": "2f9f8332540f6e9243d49a4c9d532ded5bf54cb3c2c65907c7f1711dce4f7fde"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/samples/mixed.pdf",
+        "sha256": "146a3a9ad8e0515f9935e28c1f3c111d7f62442600616103c07f03feeac340c9"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/samples/page-1-768.png",
+        "sha256": "19a555c21e81577a64d9a56b9ea8f55929d32b1f78f14a9e72d608a743d382b8"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/samples/page-1.png",
+        "sha256": "ead55cfc2a793506890c0f4d8bf7918622e08f173e177011d8b35a0c948eee5c"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/samples/page-2-768.png",
+        "sha256": "bd55c1d9fce2d01d5937e6e79a23dee0eed4894f5d0f3a08e13696413031a08f"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/samples/page-2.png",
+        "sha256": "6171b3fbb7ec140e951d43fdc64167e767364f468637269df8023f26a589dab3"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/samples/page-3-768.png",
+        "sha256": "fa2ff0fa21d3072bd606c53e4ba2ef063f3d36fb00462bcefcc93ab3966a5c9c"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/samples/page-3.png",
+        "sha256": "cb7beb31f0b30a1208d587dcd61cfe4ddbf26627f745ffc721bad3f43547f510"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/samples/page-4-768.png",
+        "sha256": "52142324a6b28298824e795d1dca459b914b22b065d6027b880d7135b1c3c6e8"
+      },
+      {
+        "path": "app/pdf_text_pages/docs/samples/page-4.png",
+        "sha256": "16b528a233f63d6ab545ba7b40bec6d69771840ca1ad8dd42162ddce5a440b78"
+      },
+      {
+        "path": "app/pdf_text_pages/main.py",
+        "sha256": "d50ee60dd7f08c4cafc72d5ac77383646319cf784d1a11a69e7203c401b9988e"
+      },
+      {
+        "path": "app/pdf_text_pages/manifest.yaml",
+        "sha256": "e6342a25860e670bab11fe823f0f2854c872e138ae4d1df26e6c840aa20f9b72"
+      },
+      {
+        "path": "app/pdf_text_pages/pdf_core/__init__.py",
+        "sha256": "5de4ede64230f255ffd89ecb370786df6015ff802e4029289b283c19f7da402d"
+      },
+      {
+        "path": "app/pdf_text_pages/pdf_core/config.py",
+        "sha256": "581308d466366e35260c7fd3c0490a780510e7a341beeb83f5f1bf9691ce9ba3"
+      },
+      {
+        "path": "app/pdf_text_pages/pdf_core/fetch.py",
+        "sha256": "efc52825ee8d779fb0684ee1247752c7d93a113043b0c877706602bef185ae73"
+      },
+      {
+        "path": "app/pdf_text_pages/pdf_core/formatting.py",
+        "sha256": "7a288737f504c9bf34cd059cc411036fe6c33fcfc0ceed50fb34180c0ee63848"
+      },
+      {
+        "path": "app/pdf_text_pages/pdf_core/model.py",
+        "sha256": "2c9c49129489639c957e0d0fd3eeb5a4dd62934e13d2e6eae1c08ec4b52c9cf0"
+      },
+      {
+        "path": "app/pdf_text_pages/pdf_core/runner.py",
+        "sha256": "39584da75149857cb30dea6021890ff7f735b40b36ce7cdcda35a8e857145946"
+      },
+      {
+        "path": "app/pdf_text_pages/pdf_core/worker.py",
+        "sha256": "d56d273ce1e4da072e51207898e7ae91b32945838ff900d58e1feb76a400d2fe"
+      },
+      {
+        "path": "app/pdf_text_pages/provider/pdf_text_pages.py",
+        "sha256": "3cea7dc168c34ff335bcd0d2d3aad104fbc0f748da24e64ecde8f1d5a5b48b12"
+      },
+      {
+        "path": "app/pdf_text_pages/provider/pdf_text_pages.yaml",
+        "sha256": "7d7afb38cc683bc4c8b8c540fac22d61f8e087bb319bd8170c2283c6dfe5500f"
+      },
+      {
+        "path": "app/pdf_text_pages/pyproject.toml",
+        "sha256": "3e16dcaccf99dc6ef863ff111d593ceefec12ed4461a1140c6e1375cdb11958f"
+      },
+      {
+        "path": "app/pdf_text_pages/requirements.txt",
+        "sha256": "aae452c8e884e18aaaaad4cc5f055e1c2c6046dd314456d1dada1e6cc0d5f833"
+      },
+      {
+        "path": "app/pdf_text_pages/tests/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "app/pdf_text_pages/tests/fixtures.py",
+        "sha256": "17b9d970620dacc8b7ac0ca470075e8131e50fb3b33fd241b892389b1b2a2c05"
+      },
+      {
+        "path": "app/pdf_text_pages/tests/test_auth_sources.py",
+        "sha256": "6c22f80766abad69de22ad8573ddf0664a04b8e29112b123b412c72395a1b958"
+      },
+      {
+        "path": "app/pdf_text_pages/tests/test_conversion.py",
+        "sha256": "aa3a5a14cadb80e9849ad0f5a4c21be709c44cd2c0cd07154dbc2a0e64a881fc"
+      },
+      {
+        "path": "app/pdf_text_pages/tests/test_empty_input.py",
+        "sha256": "11c2f8538f4ba1cc426da2b4538e22bcbafe85f7d478676a7a741189bb5954e2"
+      },
+      {
+        "path": "app/pdf_text_pages/tests/test_fetch_adapter.py",
+        "sha256": "07ab94d6cf29a0b0dab9b6b1c5ee98159b2e4251bae9595615892d5f1fe8575b"
+      },
+      {
+        "path": "app/pdf_text_pages/tests/test_fetch_diagnostics.py",
+        "sha256": "5f93ce908f69b07a89ca52b55d47c890f021891e5c600281842c7deb636fb5a4"
+      },
+      {
+        "path": "app/pdf_text_pages/tests/test_internal_mapping.py",
+        "sha256": "e9efd1649447e808ef07e111849580f4d1dcf1fd24b317ec16c19f140d9da394"
+      },
+      {
+        "path": "app/pdf_text_pages/tests/test_passthrough.py",
+        "sha256": "7845ca0b626df70d88f3809229f33a1e14524dcf27c99bb1c2c4612b196a47c2"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/INDEX.md",
+        "sha256": "f1d8056a81fb11197369cbe9d90e67de15cfa4035f020fe1107eb4a0888ca9fc"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/aileron/CC0-1.0.txt",
+        "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/aileron/NOTICE.md",
+        "sha256": "b8ee2b87dc19e25a279b2deda2bd7f772c6357da60da1399b2dae460409e60fa"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/annotated-types/METADATA.txt",
+        "sha256": "c8bd551ad48605ec77420e7f2946c3c063638af904664131e57312110a2c5c0a"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/annotated-types/licenses/LICENSE",
+        "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/anyio/METADATA.txt",
+        "sha256": "a3e856a5bf5ebba0186cd41ed38a68604d391b176f05dd99abdf8e76beb92e91"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/anyio/licenses/LICENSE",
+        "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/blinker/LICENSE.txt",
+        "sha256": "9eb73a1f38597a4aa17025d2ae1be3839624c795e985d4f0e9769ce29faca467"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/blinker/METADATA.txt",
+        "sha256": "a957fa412b10dac7625c08c2f215a4e9099c67a41a0afcf9013fc7175729bd38"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/certifi/METADATA.txt",
+        "sha256": "0974faaba9e4c171c31740485931648649b0788c989f28c5136a7e88a2f26e01"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/certifi/licenses/LICENSE",
+        "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/charset-normalizer/METADATA.txt",
+        "sha256": "ffe60f3d39070f0890be913816fc2bf587545a0ee15c456a480d1fb7bc42c2e8"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/charset-normalizer/licenses/LICENSE",
+        "sha256": "6d0d41bfe170ac6c7dc248c9a63e254d0fb45a60d50a8257d0af92c6e249b887"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/click/METADATA.txt",
+        "sha256": "4407886fc6073622695c0d0b809987d6ca8b14c74b057c4e91af8f22a25d940c"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/click/licenses/LICENSE.txt",
+        "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/dify-plugin/METADATA.txt",
+        "sha256": "4b0f86c0f085c1fd25768767e2316c8fbe35d8aee72907319129d0bf2b1240d5"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/dify-plugin/licenses/LICENSE",
+        "sha256": "84a9d51749a83b2d49e20211778158b52fa2ecc0af0b65365206d652218bda85"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/flask/METADATA.txt",
+        "sha256": "acefb15f05b629385e6f933a1832d2dce06473045f00b110e163865bd2b4dd50"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/flask/licenses/LICENSE.txt",
+        "sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/gevent/METADATA.txt",
+        "sha256": "a6a5f5cedc4b9915d0d36d9442c36b78a859df43c6752f86e466f1021beafb32"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/gevent/licenses/LICENSE",
+        "sha256": "4d46bc11d19e3853d54325973b8e2c53090f5638a7bf27fa1f5f1232c78901f7"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/greenlet/METADATA.txt",
+        "sha256": "a3c76eb927c568aa72cd56cfc0441a57603072eadce0455f74fcb8d536e30483"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/greenlet/licenses/LICENSE",
+        "sha256": "769831d6e5dfaf2c20802faccff1fafb4c2025dd8f6253dfa47fcad59d4d0979"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/greenlet/licenses/LICENSE.PSF",
+        "sha256": "e5ff3c23c110e494cd7d736c10fd96d462457bafeca310840db6527298c7d46b"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/h11/METADATA.txt",
+        "sha256": "1dadc6315837c6d5d3001f906bd38e094ff83ff7a406cf7d56fd2ad289727b67"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/h11/licenses/LICENSE.txt",
+        "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/httpcore/METADATA.txt",
+        "sha256": "29b4e84d1772a5034a66dc85162002bd705a92fa32c3bdf1b0378f092e7f456d"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/httpcore/licenses/LICENSE.md",
+        "sha256": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/httpx/METADATA.txt",
+        "sha256": "0ca499f51cbf031398fb41fca2baa745ad75bbf22116157d6549bae857bb3613"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/httpx/licenses/LICENSE.md",
+        "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/idna/METADATA.txt",
+        "sha256": "b4638f27685cbec8257a200ad5754969c8c0dcd0d52332b4fc3787163fb6c41d"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/idna/licenses/LICENSE.md",
+        "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/itsdangerous/LICENSE.txt",
+        "sha256": "63af09891b6be8ad1a4252ed43af0f4efba7fc948e228367bed7f3c5ae0b09d7"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/itsdangerous/METADATA.txt",
+        "sha256": "c773ba1f703dee9614f802d2e4abef0b2215eadf7913289ba7e528e001c433af"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/jinja2/METADATA.txt",
+        "sha256": "ac8278926237f8ade029b3cbf18e26fc7a850701f3a7af1e6ed0c2f9f13a0cbe"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/jinja2/licenses/LICENSE.txt",
+        "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/markupsafe/METADATA.txt",
+        "sha256": "a200b282f08cd02723bea5a38a6af015a1d623b5e5b1992177050e5215edd090"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/markupsafe/licenses/LICENSE.txt",
+        "sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/multidict/METADATA.txt",
+        "sha256": "0a1c09cd9178d513417ec4808b2b1e8735fe1ab9ae275d0f82d829ee554a6c40"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/multidict/licenses/LICENSE",
+        "sha256": "2e4be5fc6c4c72a466fcb665d726e049a6891981fe536c4f04b6366749461d23"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/packaging/METADATA.txt",
+        "sha256": "3d94448f333a50088e4406959897f551bf11bf740bd6cd1b35c94c00dfa026d6"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/packaging/licenses/LICENSE",
+        "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/packaging/licenses/LICENSE.APACHE",
+        "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/packaging/licenses/LICENSE.BSD",
+        "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pillow/METADATA.txt",
+        "sha256": "93f3ceb9a8f5f9366c6cee694aee75f8574a984ad8b0c90fae6ae794be1c8a02"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pillow/licenses/LICENSE",
+        "sha256": "dda12a98c1979cf3d94df1cff45d27a4cb3f04a60c76f76902ac54cac03ec0ce"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/propcache/METADATA.txt",
+        "sha256": "648feb7a39540d300c7c77f8d6fe119ad98b9752083ef910053b17c6b7f9b574"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/propcache/licenses/LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/propcache/licenses/NOTICE",
+        "sha256": "56d6ac6c8105c0a51304c21db060e361af9a8ea0af9a75c239c28b5d13693838"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pydantic-core/METADATA.txt",
+        "sha256": "9e6e6ad62074a41d4de797ef90788665e9a845582d694b03f4f199d32adc4a19"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pydantic-core/licenses/LICENSE",
+        "sha256": "2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pydantic-settings/METADATA.txt",
+        "sha256": "adec700ab4580b7ce81bdca5ef32acdf6e4b5957277676df2680bccb401d69ba"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pydantic-settings/licenses/LICENSE",
+        "sha256": "eb355a753e020346d33d83bf9769135b89fc610568ac531a01c295bcee7fd998"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pydantic/METADATA.txt",
+        "sha256": "a094e49b9916acac83bb2217f00739e281043908b8bbbf2d36a6f1c92cca8839"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pydantic/licenses/LICENSE",
+        "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/METADATA.txt",
+        "sha256": "7e77725f69d0708e28eb8d002eb2fee13c308a925461e0d9ec98a0f022e415c2"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/LICENSES/Apache-2.0.txt",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/LICENSES/BSD-3-Clause.txt",
+        "sha256": "a6d11f0694c0137e9b02924b9d33a159f6c72f220fa4655bb2e1ea3654377d39"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/LICENSES/CC-BY-4.0.txt",
+        "sha256": "419896aea50c15d6e40c5b4baf4bd346f78223b9a354c7357ad00262afdc08ec"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/data/linux_x64/BUILD_LICENSES/abseil.txt",
+        "sha256": "c79a7fea0e3cac04cd43f20e7b648e5a0ff8fa5344e644b0ee09ca1162b62747"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/data/linux_x64/BUILD_LICENSES/agg23.txt",
+        "sha256": "c110d3ea2ad77467ce0dcff7d3337e6c8be8049a5103f4b9bd5fd911a77972e5"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/data/linux_x64/BUILD_LICENSES/fast_float.txt",
+        "sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/data/linux_x64/BUILD_LICENSES/freetype.txt",
+        "sha256": "f4b133e25df1f86ad3ffea453aa0e613f0474f34778dbbb3e437e7b2724937d8"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/data/linux_x64/BUILD_LICENSES/icu.txt",
+        "sha256": "e55522d81edc687a341a4411e0776e54ca654e90147f354a90458aaced4116af"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/data/linux_x64/BUILD_LICENSES/lcms.txt",
+        "sha256": "7312b68c5b25e9bf2b828706fb4e29588f22705112f411fd42e1f7d84c3d139a"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/data/linux_x64/BUILD_LICENSES/libjpeg_turbo.ijg",
+        "sha256": "75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/data/linux_x64/BUILD_LICENSES/libjpeg_turbo.md",
+        "sha256": "96f5b328adbb78eeaaec6980d73fd558cb1e4d62560ed615646bc3cf5e532430"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/data/linux_x64/BUILD_LICENSES/libopenjpeg.txt",
+        "sha256": "c5ab0890a737c2dfa7ba675036554f6d17741d98629b0c2a145354d00617e6b2"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/data/linux_x64/BUILD_LICENSES/libpng.txt",
+        "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/data/linux_x64/BUILD_LICENSES/llvm-libc.txt",
+        "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/data/linux_x64/BUILD_LICENSES/pdfium-binaries.txt",
+        "sha256": "ba26c1263131696b86c10496b5066b918a20b7161822a80c274d0080105f6c93"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/data/linux_x64/BUILD_LICENSES/pdfium.txt",
+        "sha256": "961eacd9633fff6d051db7208b755e9210e30efac7adec3e6a6d52798f0ccf0e"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/data/linux_x64/BUILD_LICENSES/simdutf.txt",
+        "sha256": "fc8dbc04e03ad4efc08a647ffe7f995b811a95bc04c0e85a56d5277c6593fa5f"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pypdfium2/licenses/data/linux_x64/BUILD_LICENSES/zlib.txt",
+        "sha256": "33fd641c9f3b0e0be64bc78fea9e94807674cdd70c48477599226cb8956565fe"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/python-dotenv/METADATA.txt",
+        "sha256": "cbb508f49c03eb8e54bda5a2d82ccae2d97a8af92b109cb330e16d2f2985b926"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/python-dotenv/licenses/LICENSE",
+        "sha256": "80619b7049f08c81683ad0e01f08f257a840652dd71ee83146d36658c7d2c2b9"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pyyaml/METADATA.txt",
+        "sha256": "ed20f9e73d789ef14174063fa56d15cb58a98d54bd58bdcfbb3124176ab436d8"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/pyyaml/licenses/LICENSE",
+        "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/regex/METADATA.txt",
+        "sha256": "ad911fdcdd11909881eaa527fc1d6ada01f3cfdf16d49131dde8b9862dfde04f"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/regex/licenses/LICENSE.txt",
+        "sha256": "bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/requests/METADATA.txt",
+        "sha256": "83085c294297174b1ef1082d7d67190ebf2184750921f74a7814c0b733d5b1eb"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/requests/licenses/LICENSE",
+        "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/requests/licenses/NOTICE",
+        "sha256": "f5110972dedad2b4e9d314518daf3b7d72d6e02e499acd802181de6f74571dcc"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/socksio/LICENSE",
+        "sha256": "7087f0f5f7c2993f3c4ed117baa3622c1063626e7c692e9ea116475b5fc1396c"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/socksio/METADATA.txt",
+        "sha256": "38ca88b0f4207cc63b0b900557f852aeaff8ad177a2d43bc7cf16e40ca75265b"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/tiktoken/METADATA.txt",
+        "sha256": "a6a8cad87392fe70575d532d1609274f77ba3f70dfe6603780e6fc068f8da3c8"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/tiktoken/licenses/LICENSE",
+        "sha256": "418cb499b436128d653d79941333a5437b7be2ea9213dcc2f04d15d5d2c51d86"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/typing-extensions/METADATA.txt",
+        "sha256": "13ee82072c80f4a363f6467d2262bd9a9ec0315a581b85edb0ca389ca62b1206"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/typing-extensions/licenses/LICENSE",
+        "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/typing-inspection/METADATA.txt",
+        "sha256": "c9038fe1855075ffe2ce8f52fa37044cf5f110b226c8b3d6a006fb7aa1b7f152"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/typing-inspection/licenses/LICENSE",
+        "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/urllib3/METADATA.txt",
+        "sha256": "b6ebacb63188482077e3cd1afbd07188466f66bd46782e5e8e7dcfca0d7c23fa"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/urllib3/licenses/LICENSE.txt",
+        "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/werkzeug/METADATA.txt",
+        "sha256": "2efeaeb337970861a9dd37dc7c29506f28e7981e69d8e763fc1d1e42e62836dc"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/werkzeug/licenses/LICENSE.txt",
+        "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/yarl/METADATA.txt",
+        "sha256": "f82cfd9c9a8822817dbf5ae12dc4c596ac8bb683dc49d66d981b69c0a3fe9211"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/yarl/licenses/LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/yarl/licenses/NOTICE",
+        "sha256": "56d6ac6c8105c0a51304c21db060e361af9a8ea0af9a75c239c28b5d13693838"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/zope-event/METADATA.txt",
+        "sha256": "69342c8ff6f04b5d980dda4e833cc453935c65e18f3987a6a2e4e8767c3d22fd"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/zope-event/licenses/LICENSE.txt",
+        "sha256": "3e671db11df687516cc1db5b3d65e4aa383eaca3c20cea3faf53a0f7335d0a3c"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/zope-interface/METADATA.txt",
+        "sha256": "44bd257d8c4ccde3bb5b228f758176ac7d7dd1d846ac01ee36cbbb36dbff7b38"
+      },
+      {
+        "path": "app/pdf_text_pages/third_party/zope-interface/licenses/LICENSE.txt",
+        "sha256": "3e671db11df687516cc1db5b3d65e4aa383eaca3c20cea3faf53a0f7335d0a3c"
+      },
+      {
+        "path": "app/pdf_text_pages/tools/pdf_text_pages.py",
+        "sha256": "6d050c5951e3e0286fa113174af80b555855e56de6518a5bf23713a57a016517"
+      },
+      {
+        "path": "app/pdf_text_pages/tools/pdf_text_pages.yaml",
+        "sha256": "7f0b0898f93265d5359bc4027f2ee6ca14e8b282a75579ed507ea434b41462d7"
+      },
+      {
+        "path": "app/pdf_text_pages/uv.lock",
+        "sha256": "5bea41ccef23c831839cb91a4a883813dfcfdef6fbc37dce249182be8fe181c2"
+      },
+      {
+        "path": "app/sharepoint_list/PRIVACY.md",
+        "sha256": "4f9a3b3981b21860df258156cd9d1382a55cf59c7e0acce4724ceab5af197fcb"
+      },
+      {
+        "path": "app/sharepoint_list/README.md",
+        "sha256": "5dbad52465714deb74a1650e1ce159fe00f77ee262e57552e50fc9972d443dc8"
+      },
+      {
+        "path": "app/sharepoint_list/_assets/icon.svg",
+        "sha256": "4feb03c4c9175464d6bcb4bec63da00504e029c2ae83fc3a8807c3718a5eed4e"
+      },
+      {
+        "path": "app/sharepoint_list/icon.svg",
+        "sha256": "4feb03c4c9175464d6bcb4bec63da00504e029c2ae83fc3a8807c3718a5eed4e"
+      },
+      {
+        "path": "app/sharepoint_list/internal/__init__.py",
+        "sha256": "629ed5100d1b108737470b98f6a8611246a1f2976c09f854f2634e92089cbf76"
+      },
+      {
+        "path": "app/sharepoint_list/internal/debug_logging.py",
+        "sha256": "660ffe713758aa2569df17821fdeae66e2381dfad2700192e7437f227c64b227"
+      },
+      {
+        "path": "app/sharepoint_list/internal/filters.py",
+        "sha256": "4c0dfddae6338aabc1725a73cb07441de1f273562dda17187e7a6a9eee926857"
+      },
+      {
+        "path": "app/sharepoint_list/internal/http_client.py",
+        "sha256": "c63cdd147c5527f9c385c9289e3f8015a658c8336a19d40afa8bb593fc104f04"
+      },
+      {
+        "path": "app/sharepoint_list/internal/operations.py",
+        "sha256": "f77ca777b5a71d3a78d37a08f26c8d8f7b605964a1a3a47eb42cd65a589f63c8"
+      },
+      {
+        "path": "app/sharepoint_list/internal/request_builders.py",
+        "sha256": "ea87c47a205c891aac258b7fa8ad9e4f94e81f62ca07d09b54381043761b2b47"
+      },
+      {
+        "path": "app/sharepoint_list/internal/validators.py",
+        "sha256": "652729adec2c2f79cd29c475c3fbd57b83811d1d37df571c7091ee959c08487e"
+      },
+      {
+        "path": "app/sharepoint_list/main.py",
+        "sha256": "148124a09535f1bfb91e256c0f4aa1a84837e51a040a40cafde3fb6986bedd51"
+      },
+      {
+        "path": "app/sharepoint_list/manifest.yaml",
+        "sha256": "e1fce8e10e2c126914f0cd8e2d5080a98641449bdd9e5c9c1d2dd740450c7718"
+      },
+      {
+        "path": "app/sharepoint_list/provider/__init__.py",
+        "sha256": "cd52e9a141abc5ea35e9b91fc2b8715f490f7d5750ba81dfed50f9f8a19def7d"
+      },
+      {
+        "path": "app/sharepoint_list/provider/sharepoint_list.py",
+        "sha256": "8c6f7ba22114d8010e90daf5552b50bd1c97d49d7937d4c347767419f8b0e9cd"
+      },
+      {
+        "path": "app/sharepoint_list/provider/sharepoint_list.yaml",
+        "sha256": "d4e42743b07255ca786da8716c0487249461d16497867060c51e411964f12992"
+      },
+      {
+        "path": "app/sharepoint_list/requirements.txt",
+        "sha256": "d3baf96e78e7b8d89a62ea25578e079fb76bd11024e939ffd59dcfd06dd686e1"
+      },
+      {
+        "path": "app/sharepoint_list/tools/__init__.py",
+        "sha256": "b1cec634df460fd8492e9c84636b76d92b7f30b466fc054e0c3ce74cf82f26c8"
+      },
+      {
+        "path": "app/sharepoint_list/tools/create_item.py",
+        "sha256": "d37723f2afc09f1d8487938978208e1183028ccefdfabd44adb1a507defeaf14"
+      },
+      {
+        "path": "app/sharepoint_list/tools/create_item.yaml",
+        "sha256": "7325185a6ccbf15b62ab7e47ac7f13061c5a723b54d74fe9138937f45a86cd99"
+      },
+      {
+        "path": "app/sharepoint_list/tools/get_choices.py",
+        "sha256": "882d62052ef8c09bc3ff1b49a24cc0bb221fd751864058ce0f8ed268e0065f16"
+      },
+      {
+        "path": "app/sharepoint_list/tools/get_choices.yaml",
+        "sha256": "1147036009a7a1e3c6b0f4f3e40fd98985e07b379c2dd23d937f047d65c7726f"
+      },
+      {
+        "path": "app/sharepoint_list/tools/get_item.py",
+        "sha256": "a6b2b036006068fdb398e9be56aad2c8acae81fa0917a70416f963c09f02fbe2"
+      },
+      {
+        "path": "app/sharepoint_list/tools/get_item.yaml",
+        "sha256": "0e05ebe122457fb62b71d14e1474b6c060a1964225867538159ac3a27e1739b5"
+      },
+      {
+        "path": "app/sharepoint_list/tools/list_items.py",
+        "sha256": "3a0a8f30890f297ab4daaa5c32a2ef63c481e10ef790ddd7205ab6e6ba21b40f"
+      },
+      {
+        "path": "app/sharepoint_list/tools/list_items.yaml",
+        "sha256": "da5c8b9817dafb13852d63e2270c0dbe05824b92d0cabaa0f10926c8874d3dba"
+      },
+      {
+        "path": "app/sharepoint_list/tools/update_item.py",
+        "sha256": "05f395356a4c0997247ce70e1512206b60ecfddca53ffa08eb1e7966ef767811"
+      },
+      {
+        "path": "app/sharepoint_list/tools/update_item.yaml",
+        "sha256": "f5bc6b6639f31d2c2fa10c991f47def12909044988e3c4b733c186eb7b1f9be8"
+      },
+      {
+        "path": "tests/__init__.py",
+        "sha256": "27409e3d84703dcecff662840d6c2d080c33849d1468813e26cc69b375156cd7"
+      },
+      {
+        "path": "tests/gpt5_agent_strategies/test_entrypoints_and_react.py",
+        "sha256": "eddd5b54a37fcc4f3b617c73c70416be3f0b21c9a148c3d3ce3a00bfe8d39102"
+      },
+      {
+        "path": "tests/gpt5_agent_strategies/test_flow.py",
+        "sha256": "0509ec56aecd6ea42fe5bc4f14f4fc3258d7d6820826f82e67a80dc66d1f5d34"
+      },
+      {
+        "path": "tests/gpt5_agent_strategies/test_policy.py",
+        "sha256": "e809e8ab8eefad5ef6f2d7c84fb3f89309dbe3ca51784d356a4f32f1a20df389"
+      },
+      {
+        "path": "tests/gpt5_agent_strategies/test_strategy_invoke_paths.py",
+        "sha256": "b7b3e8d9a1ee17b30c7462eca44e3b022057bc02c1082815e3a8a36ae1a9c935"
+      },
+      {
+        "path": "tests/gpt5_agent_strategies/test_strategy_safety.py",
+        "sha256": "b3e980fe731372e650b274a46fb0b7b1d69474c6ed9bb49b4263177af078212f"
+      },
+      {
+        "path": "tests/gpt5_agent_strategies/test_strategy_schema.py",
+        "sha256": "76a0c21a31c8168cae9485fc786479b9bc4f341afdaabf8f773152ba62b2239d"
+      },
+      {
+        "path": "tests/nanobana/conftest.py",
+        "sha256": "84b420f351ed320223604d48bda4a097d24465b9df44656a5049f47686129353"
+      },
+      {
+        "path": "tests/nanobana/test_auth.py",
+        "sha256": "98c5fc6a1ed913f092fc0eebb781eeb44bf5f077d20e1af250b4c6e43e108cc7"
+      },
+      {
+        "path": "tests/nanobana/test_dify_loader.py",
+        "sha256": "fc3ba9e954f98033e1678f8d25d109d9765cd3dbbb4b1b8e6e5c2d1a13b3ee39"
+      },
+      {
+        "path": "tests/nanobana/test_schema_docs.py",
+        "sha256": "bb179129cf4d06b16b80ad4c29273ac646d420c1ec66dfcdd7ccf16a8ec9e8af"
+      },
+      {
+        "path": "tests/nanobana/test_tool_runtime.py",
+        "sha256": "28886ac7b4e6be17805b97c0bde763ad23080e21458ca56f173b1b02675ace9a"
+      },
+      {
+        "path": "tests/openai_gpt5_responses/test_entrypoints_and_errors.py",
+        "sha256": "0d31676f5bdaf349114684b473481c03d501566fce9b5e191f745eb2f759bbc3"
+      },
+      {
+        "path": "tests/openai_gpt5_responses/test_llm_stream_flag.py",
+        "sha256": "12125f8f376c350aa2dcbdf4380ed274d01a51d4768ee329305186f6f2c6284d"
+      },
+      {
+        "path": "tests/openai_gpt5_responses/test_messages.py",
+        "sha256": "8b1ffab3366fdebdce756162bd90b1afacec685505c396a354b2030e5e967e16"
+      },
+      {
+        "path": "tests/openai_gpt5_responses/test_payloads.py",
+        "sha256": "cd78e4d36525ae5177223be367c54ee928e36dbab84b46e4e59393ce66ae81eb"
+      },
+      {
+        "path": "tests/openai_gpt5_responses/test_payloads_bool_coercion.py",
+        "sha256": "5148a918d652c5c0fb750f4964ef58b3b34022b10fb432a091b8d4dba6edfd6b"
+      },
+      {
+        "path": "tests/openai_gpt5_responses/test_provider_runtime.py",
+        "sha256": "5a10152c2bd570f6d3129ea2daccfacf4012fa794c4aaa026b652b11d563110c"
+      },
+      {
+        "path": "tests/openai_gpt5_responses/test_provider_schema.py",
+        "sha256": "c8ec7751d4397e8d10d5b352d6dce2da83414a5471edb12d6e2ed8d849c943d4"
+      },
+      {
+        "path": "tests/sharepoint_list/__init__.py",
+        "sha256": "643716d4c11f5307c82638d86d0972774e98ac816ed28f8b0720e6df7524bf83"
+      },
+      {
+        "path": "tests/sharepoint_list/_stub_http_server.py",
+        "sha256": "57ca09a344207f1a3b023886154c47132703ab0509dbc08fd4b8ccfb1c7b3fea"
+      },
+      {
+        "path": "tests/sharepoint_list/test_filters.py",
+        "sha256": "45af6b85e480b1c6637140e1f3297f39f805e4bc8db0339864f5f6313752f73a"
+      },
+      {
+        "path": "tests/sharepoint_list/test_http_client.py",
+        "sha256": "0268be66ee8b6f90855e678ca70a04774f2c74283846852ad4b19d34d2ef3260"
+      },
+      {
+        "path": "tests/sharepoint_list/test_operations_choices.py",
+        "sha256": "34ae247b2c15d39318312e5196a888473ceffdc0d7e12acb673c4ddce299931d"
+      },
+      {
+        "path": "tests/sharepoint_list/test_operations_crud.py",
+        "sha256": "316c2706292be7cf851e178689672ff62fe66718261533e2676c1d35abc2522d"
+      },
+      {
+        "path": "tests/sharepoint_list/test_operations_debug.py",
+        "sha256": "48512a6578de5da33f3f1820844cac909f0ea042aa3c60ad373309a117764efa"
+      },
+      {
+        "path": "tests/sharepoint_list/test_operations_fields.py",
+        "sha256": "919fac79b83887ae2727b7470c6e7b463e41a35e4d9cb64e34fef8d573b5bf8d"
+      },
+      {
+        "path": "tests/sharepoint_list/test_operations_filters.py",
+        "sha256": "ec07e2ad114e04863ad4a11cebb4d226c7b6b4835ed5b37c20a3e8cfb3c9cc1e"
+      },
+      {
+        "path": "tests/sharepoint_list/test_operations_select.py",
+        "sha256": "8b56aa0a5305f75b3a230766a16ccc7e4cb05066654270787a2cab679a5df230"
+      },
+      {
+        "path": "tests/sharepoint_list/test_requests.py",
+        "sha256": "c3fb28c2d92b758d2fdda2149afdeb6a8f67960356ac61286544356a21454421"
+      },
+      {
+        "path": "tests/sharepoint_list/test_validators.py",
+        "sha256": "6cf24c329a92415114ce7938a5c4805cf28df7bfcbcf1a453cc2412316118ea0"
+      },
+      {
+        "path": "tests/sharepoint_list/test_validators_list_url.py",
+        "sha256": "53358e86191d9d779822cb9221150661f531bd3f1d2b39b5710c6c8c49990302"
+      }
+    ]
+  }
+]

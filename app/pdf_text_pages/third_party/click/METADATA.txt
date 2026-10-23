@@ -1,0 +1,4 @@
+Name: click
+Version: 8.5.0
+License: BSD-3-Clause
+Project-URL: ['Changes, https://click.palletsprojects.com/page/changes/', 'Chat, https://discord.gg/pallets', 'Documentation, https://click.palletsprojects.com/', 'Donate, https://palletsprojects.com/donate', 'Source, https://github.com/pallets/click/']

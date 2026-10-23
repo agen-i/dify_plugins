@@ -1,0 +1,4 @@
+Name: requests
+Version: 2.34.2
+License: Apache-2.0
+Project-URL: ['Documentation, https://requests.readthedocs.io', 'Source, https://github.com/psf/requests']

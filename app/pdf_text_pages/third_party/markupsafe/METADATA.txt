@@ -1,0 +1,4 @@
+Name: MarkupSafe
+Version: 3.0.4
+License: BSD-3-Clause
+Project-URL: ['Donate, https://palletsprojects.com/donate', 'Documentation, https://markupsafe.palletsprojects.com/', 'Changes, https://markupsafe.palletsprojects.com/page/changes/', 'Source, https://github.com/pallets/markupsafe/', 'Chat, https://discord.gg/pallets']

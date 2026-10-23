@@ -1,0 +1,4 @@
+Name: gevent
+Version: 26.9.0
+License: MIT
+Project-URL: ['Bug Tracker, https://github.com/gevent/gevent/issues', 'Source Code, https://github.com/gevent/gevent/', 'Documentation, http://www.gevent.org', 'Changes, https://www.gevent.org/changelog.html']

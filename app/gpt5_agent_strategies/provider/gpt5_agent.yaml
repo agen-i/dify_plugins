@@ -1,0 +1,16 @@
+identity:
+  author: tkosht
+  name: gpt5_agent
+  label:
+    en_US: GPT-5 Agent
+    ja_JP: GPT-5 Agent
+  description:
+    en_US: GPT-5 focused agent strategy provider
+    ja_JP: GPT-5 系向け Agent Strategy Provider
+  icon: icon.svg
+strategies:
+  - strategies/gpt5_function_calling.yaml
+  - strategies/gpt5_react.yaml
+extra:
+  python:
+    source: provider/gpt5_agent.py

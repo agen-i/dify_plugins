@@ -1,0 +1,11 @@
+[project]
+name = "sharepoint-list"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = ["dify-plugin==0.9.1", "requests>=2.34.2"]
+[dependency-groups]
+dev = ["pytest", "pytest-mock"]
+[tool.uv]
+package = false
+[tool.pytest.ini_options]
+pythonpath = [".", "../.."]

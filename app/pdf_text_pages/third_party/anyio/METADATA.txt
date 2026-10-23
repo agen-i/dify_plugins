@@ -1,0 +1,4 @@
+Name: anyio
+Version: 4.15.1
+License: MIT
+Project-URL: ['Documentation, https://anyio.readthedocs.io/en/latest/', 'Changelog, https://anyio.readthedocs.io/en/stable/versionhistory.html', 'Source code, https://github.com/agronholm/anyio', 'Issue tracker, https://github.com/agronholm/anyio/issues']

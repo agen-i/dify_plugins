@@ -1,0 +1,4 @@
+Name: urllib3
+Version: 2.8.0
+License: MIT
+Project-URL: ['Changelog, https://github.com/urllib3/urllib3/blob/main/CHANGES.rst', 'Documentation, https://urllib3.readthedocs.io', 'Code, https://github.com/urllib3/urllib3', 'Issue tracker, https://github.com/urllib3/urllib3/issues', 'Security policy, https://urllib3.readthedocs.io/en/latest/security.html']

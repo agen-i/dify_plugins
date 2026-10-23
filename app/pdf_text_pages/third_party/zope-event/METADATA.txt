@@ -1,0 +1,4 @@
+Name: zope.event
+Version: 6.2
+License: ZPL-2.1
+Project-URL: ['Documentation, https://zopeevent.readthedocs.io/', 'Source, https://github.com/zopefoundation/zope.event', 'Issues, https://github.com/zopefoundation/zope.event/issues', 'Changelog, https://raw.githubusercontent.com/zopefoundation/zope.event/master/CHANGES.rst']

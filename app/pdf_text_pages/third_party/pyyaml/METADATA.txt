@@ -1,0 +1,4 @@
+Name: PyYAML
+Version: 6.0.3
+License: MIT
+Project-URL: ['Bug Tracker, https://github.com/yaml/pyyaml/issues', 'CI, https://github.com/yaml/pyyaml/actions', 'Documentation, https://pyyaml.org/wiki/PyYAMLDocumentation', 'Mailing lists, http://lists.sourceforge.net/lists/listinfo/yaml-core', 'Source Code, https://github.com/yaml/pyyaml']

@@ -1,0 +1,4 @@
+Name: pydantic_core
+Version: 2.46.5
+License: MIT
+Project-URL: ['Funding, https://github.com/sponsors/samuelcolvin', 'Homepage, https://github.com/pydantic', 'Source, https://github.com/pydantic/pydantic/tree/main/pydantic-core']

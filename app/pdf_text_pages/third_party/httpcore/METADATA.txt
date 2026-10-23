@@ -1,0 +1,4 @@
+Name: httpcore
+Version: 1.0.9
+License: BSD-3-Clause
+Project-URL: ['Documentation, https://www.encode.io/httpcore', 'Homepage, https://www.encode.io/httpcore/', 'Source, https://github.com/encode/httpcore']

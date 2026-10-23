@@ -1,0 +1,4 @@
+Name: itsdangerous
+Version: 2.2.0
+License: See wheel metadata/licenses
+Project-URL: ['Changes, https://itsdangerous.palletsprojects.com/changes/', 'Chat, https://discord.gg/pallets', 'Documentation, https://itsdangerous.palletsprojects.com/', 'Donate, https://palletsprojects.com/donate', 'Source, https://github.com/pallets/itsdangerous/']
