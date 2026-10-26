@@ -1,0 +1,48 @@
+{
+  "plugin_version": "0.1.7",
+  "author": "agen-i",
+  "base_commit": "ac8a156d0e9edcab319ef19b3f7193751bccb246",
+  "package_path": "dist/pdf_text_pages-0.1.7.difypkg",
+  "package_sha256": "b7d9cdcec45a98933e8f846b359ac229a7d630c3ffdc70bedb033ae12bacea46",
+  "package_bytes": 428813,
+  "payload_file_count": 150,
+  "source_manifest_path": "dist/SOURCE_SHA256-0.1.7.txt",
+  "source_manifest_sha256": "0d7468075d5a51880f241638df42f81e8681755ae1149b6acd686d8594842d4e",
+  "publication_method": "Byte-identical copy of the accepted and normally installed package; no rebuild. Four packaged Python source files differ from repository bytes only by Black formatting, with AST equivalence checked for every Python payload file.",
+  "verification": "Previously accepted 55 related tests and exact-package PDF outputs, independent review, and user-reported normal installation/result success.",
+  "scope": "SDK-signed source metadata; strict fetch safety; PDF/image handling; required file-list binding with missing-input error and explicit-empty-list success. Distribution excludes tests.",
+  "packaged_payload_matches_frozen_tested_source": true,
+  "source_manifest_role": "SHA256 of exact frozen source bytes contained in the tested package, not formatted repository bytes.",
+  "repository_source_equivalence": {
+    "python_payload_files_ast_identical": 11,
+    "non_python_payload_files_byte_identical": 139,
+    "packaged_payload_file_count": 150,
+    "test_payload_file_count": 0,
+    "format_only_byte_differences": [
+      {
+        "path": "pdf_core/config.py",
+        "packaged_source_sha256": "14f7677f97a529dfc3ae66ff2f425caea8ae0ff818782e51abe9bd389663e318",
+        "committed_formatted_source_sha256": "ac40dc8da9c4aac843f527556ad30bd662f58f4d9edb65e536336037bfa573b1",
+        "equivalence": "Python AST identical; Black formatting only"
+      },
+      {
+        "path": "pdf_core/fetch.py",
+        "packaged_source_sha256": "e987a3a73b2366f7c6e049274fe2c1389d8ee03f2be4d36b1b0e76dbef07590c",
+        "committed_formatted_source_sha256": "913e57942ee4a29a0f1d195c5a366f25723526d5db965ef9d54e2ac0953d6954",
+        "equivalence": "Python AST identical; Black formatting only"
+      },
+      {
+        "path": "pdf_core/runtime_source.py",
+        "packaged_source_sha256": "3d8d6ddc6988dc86bc3b764653e6c4bbe51fdaaa069d9ae0da3926bb619b92ef",
+        "committed_formatted_source_sha256": "516fe35d6c2f6aa9223126abc5840e9d57fde54c8ecbfbf0314169e414f95572",
+        "equivalence": "Python AST identical; Black formatting only"
+      },
+      {
+        "path": "tools/pdf_text_pages.py",
+        "packaged_source_sha256": "b63702a8da37bddcf17467b90ec4b234dc2ab1decc71d43f3d7aca507be9bd02",
+        "committed_formatted_source_sha256": "b6cb429b8f9c520bbc40a969e1411f257c275592a6021bcb4bb3e2a5f63b7713",
+        "equivalence": "Python AST identical; Black formatting only"
+      }
+    ]
+  }
+}

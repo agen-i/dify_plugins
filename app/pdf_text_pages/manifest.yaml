@@ -1,6 +1,6 @@
-version: 0.1.6
+version: 0.1.7
 type: plugin
-author: tkosht
+author: agen-i
 name: pdf_text_pages
 label:
   en_US: PDF Text and Pages

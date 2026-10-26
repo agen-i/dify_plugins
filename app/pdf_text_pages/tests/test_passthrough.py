@@ -2,7 +2,7 @@
 
 import pytest
 from dify_plugin.file.file import File
-from pdf_core.config import Limits
+from pdf_core.config import Limits, parse_runtime_base
 from pdf_core.model import (
     BatchRecord,
     ConversionError,
@@ -30,7 +30,13 @@ def item(name, extension, mime="application/octet-stream"):
 def invoke(monkeypatch):
     import tools.pdf_text_pages as module
 
-    monkeypatch.setenv("INTERNAL_FILES_URL", "http://fixture.invalid")
+    monkeypatch.setattr(
+        module,
+        "discover_runtime_sources",
+        lambda *args: (
+            parse_runtime_base("http://fixture.invalid", "test runtime"),
+        ),
+    )
     data = {}
     calls = []
 
@@ -149,9 +155,7 @@ def test_passthrough_output_file_cap_is_checked_before_yield(
 ):
     import tools.pdf_text_pages as module
 
-    monkeypatch.setattr(
-        module.Limits, "from_env", lambda: Limits(output_file_bytes=50)
-    )
+    monkeypatch.setattr(module, "Limits", lambda: Limits(output_file_bytes=50))
     run, _ = invoke
     with pytest.raises(ConversionError, match="LIMIT"):
         next(run([item("raw.bin", ".bin")], [b"x" * 51]))
@@ -163,8 +167,8 @@ def test_pdf_and_passthrough_share_total_output_budget(invoke, monkeypatch):
     import tools.pdf_text_pages as module
 
     monkeypatch.setattr(
-        module.Limits,
-        "from_env",
+        module,
+        "Limits",
         lambda: Limits(output_file_bytes=50, output_total_bytes=70),
     )
     batch_id = "B" + "0" * 32
@@ -239,3 +243,33 @@ def test_missing_passthrough_metadata_uses_only_declared_sdk_fallback(invoke):
         "filename": "file",
         "mime_type": "application/octet-stream",
     }
+
+
+@pytest.mark.parametrize("filename", [None, "without-extension"])
+def test_pdf_bytes_without_filename_extension_are_converted(invoke, filename):
+    run, _ = invoke
+    file = (
+        item(filename, None, "application/pdf")
+        if filename
+        else File(
+            url="http://fixture.invalid/files/unnamed/file-preview",
+            type="document",
+            filename=None,
+            extension=None,
+            mime_type="application/pdf",
+        )
+    )
+    messages = list(run([file], [make_pdf(pages=2)]))
+    assert "ALPHA" in messages[0].message.text
+    assert len(messages[1:-1]) == 2
+    assert all(m.message.blob.startswith(b"\x89PNG") for m in messages[1:-1])
+    assert [
+        p["image_index"]
+        for p in messages[-1].message.json_object["documents"][0]["pages"]
+    ] == [0, 1]
+
+
+def test_mime_declared_pdf_without_signature_fails_before_output(invoke):
+    run, _ = invoke
+    with pytest.raises(ConversionError, match="PDF_OPEN"):
+        next(run([item("wrong", None, "application/pdf")], [b"not a PDF"]))

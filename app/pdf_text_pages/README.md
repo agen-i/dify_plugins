@@ -1,4 +1,12 @@
-# PDF本文・ページ画像プラグイン 0.1.6
+# PDF本文・ページ画像プラグイン 0.1.7
+
+現行修復候補のplugin IDは`agen-i/pdf_text_pages`、provider IDは`agen-i/pdf_text_pages/pdf_text_pages`です。引継ぎ基準はコミット`ac8a156d0e9edcab319ef19b3f7193751bccb246`（0.1.6）で、旧authorの履歴・著作権・過去エラーは保持します。
+
+今回の必要差分は、環境変数からの配信先取得を、既存Dify実行セッションの署名付きUploadFileメタデータ要求1回へ置き換えることです。本文uploadは行わず、入力URLからsourceを承認しません。0.1.6の取得・origin/route・DNS/peer/TLS・署名path/query保持・変換/出力処理をそのまま使い、上限は既定`Limits()`に固定します。 現行経路から参照されない旧環境変数・alias・JSON設定APIは整理し、配信URLの選択はDify側、承認は独立した署名メタデータ、取得はその承認sourceに限定する役割を分けています。 単一SDK Fileは一要素リストとして受け付けます。拡張子情報が無いPDFは、取得済みbytesの署名とMIMEで補助判定して全ページへ変換します。明示拡張子の従来優先は保ち、PDFと判定した入力の不正署名は拒否します。
+
+**配信origin:** 入力Fileと独立した署名メタデータのoriginが一致し、実行環境から到達できることを承認・取得条件にします。内部配信が必要なdeploymentではDify既存の`INTERNAL_FILES_URL`を使います。`http://dify`は今回の到達例で、一般defaultや製品固定値ではありません。公開`FILES_URL`へ到達できる場合は内部URLの追加設定は不要です。今回の問題の正常系は利用者が確認済みで、このリファクタリングはserver設定やURLを書き換えません。
+
+配布namespaceは`pdf_text_pages-routing-repair-0.1.7/`とし、旧0.1.7以降の配布物を上書きしません。以下の0.1.6運用記録・過去エラーは履歴として保持し、現行候補の設定はこの節を適用します。
 
 PDFの全ページを、同じページレコードの本文とPNG画像から出力します。Dify Chatflowの標準LLMノードへ完成済み`text`と`files`を直接接続する設計です。Template・コードノード・リスト変換・`json`の追加入力を利用者へ要求しません。ローカルSDK・変換・安全性テストと公式CLIパッケージ化を実施しています。**顧客Dify上での直接接続とLLMの回答精度は未検証です。** 実施範囲は[VERIFICATION.md](VERIFICATION.md)を参照してください。
 
@@ -22,7 +30,7 @@ PDFの全ページを、同じページレコードの本文とPNG画像から�
 
 ファイル入力は`pdf_files`一つです。`sys.files`や任意のFileリスト、単一File変数を指定できます。Dify1.17.1のselectorはFile/Array[File]を許可し、単一Fileはcoreが一要素listへ変換してSDKへ渡します。ユーザー側でリスト化するノードは不要です。この経路は[固定sourceと検証記録](VERIFICATION.md)に基づき、実UIは未測です。
 
-入力ファイルが0件（空list・未指定・None）なら正常終了し、`text`は空文字、`files`は標準の空list、`json`は既存schemaでdocuments=[]を返します。通信・変換・slot/一時childを開始せず、不要な配信source/DPI/管理limits検査も行いません。list以外の不正値を空として扱わず、1件以上では配信設定・DPI・上限を検査します。PDFの順序・重複・全page/空本文対応を維持します。
+ファイルリスト（`pdf_files`）にはPDF/画像を受け取る変数を必ず設定してください。未指定・Noneは設定箇所を示すINPUTエラーになります。接続した変数が空listなら正常終了し、`text`は空文字、`files`は標準の空list、`json`は既存schemaでdocuments=[]を返します。通信・変換・slot/一時childを開始せず、不要な配信source/DPI/管理limits検査も行いません。list以外の不正値を空として扱わず、1件以上では配信設定・DPI・上限を検査します。PDFの順序・重複・全page/空本文対応を維持します。
 
 最新ユーザー指示で`pdf_file`パラメータと二入力口の併用を廃止しました。旧`pdf_file`を設定していたノードは、`pdf_files`へ同じFile変数を選び直してください。本文/imagesの後処理やJSON追加は不要です。原HANDOFFは変更せず、入力口の採用変更として本記録に分けて残します。
 
@@ -40,7 +48,7 @@ PDFの全ページを、同じページレコードの本文とPNG画像から�
 
 設定不足・不適合は通信前に短い日本語のノードエラーになります。例：「FILES_URL / INTERNAL_FILES_URL（既存の別名設定を含む）が未設定です。管理者はDifyの既存配信設定とプラグインへの継承を確認してください。」値・URL・署名は表示しません。管理者は既存設定の解決値と継承を確認し、窓口が次案を判断します。認証JSONや新しい必須設定を追加して解決済みとは扱いません。coreのremote/TOML設定とpluginの環境設定が一致する保証はなく、公式composeのAPI専用`api.env`の値がdaemonへ渡る保証もありません。
 
-承認hostのDNSは取得期限内に停止・回収可能な子プロセスで解決し、一回のDNS解決結果内のIPへ固定して実socket peerのIP/portを確認します。接続失敗時だけ同じsnapshot内の次IPを、累積期限内で試します。peer/TLS検証失敗やHTTP送信後は再試行しません。HTTP Host/TLS SNIと標準CA/hostname検証を維持し、redirect・環境proxy・userinfo・fragment・encoding/traversalを拒否します。resolver/networkとcore設定の対応は対象環境で確認する条件です。[旧JSON例](config/allowed_sources.example.json)は0.1.0の書式証拠として保持しており、0.1.1の認証入力や設定sourceには使いません。署名付きURLをチャットや通常ログへ貼らないでください。
+承認hostのDNSは取得期限内に停止・回収可能な子プロセスで解決し、一回のDNS解決結果内のIPへ固定して実socket peerのIP/portを確認します。接続失敗時だけ同じsnapshot内の次IPを、累積期限内で試します。peer/TLS検証失敗やHTTP送信後は再試行しません。HTTP Host/TLS SNIと標準CA/hostname検証を維持し、redirect・環境proxy・userinfo・fragment・encoding/traversalを拒否します。resolver/networkとcore設定の対応は対象環境で確認する条件です。[旧JSON例（履歴）](https://github.com/agen-i/dify_plugins/blob/ac8a156d0e9edcab319ef19b3f7193751bccb246/app/pdf_text_pages/config/allowed_sources.example.json)は0.1.0の書式証拠として保持しており、0.1.1の認証入力や設定sourceには使いません。署名付きURLをチャットや通常ログへ貼らないでください。
 
 4. 非機密合成PDFで[実機検証手順](docs/LIVE_TESTS.md)を実施します。`text`と`files`が標準LLMへ入った実行traceを確認してから顧客資料へ進んでください。
 
@@ -57,7 +65,7 @@ PDFの全ページを、同じページレコードの本文とPNG画像から�
 | 任意の単一File変数 | `pdf_files`へ直接指定。Dify coreが一要素listへ変換 |
 | 添付リスト`sys.files`等 | `pdf_files`へその変数を指定 |
 | 任意のファイルリスト変数 | `pdf_files`へ指定。元の順序と重複を保持 |
-| 入力なし | 未指定/空list/Noneでtext空・files空・文書0件JSON |
+| 入力なし | 未指定/NoneはINPUTエラー。接続済み空listはtext空・files空・文書0件JSON |
 | PDF以外のみ | text空・filesは元ファイル・文書0件JSON。取得設定を検査 |
 
 `pdf_files`は0..管理上限件です。PDF以外も取得して元ファイルとして返します。同名/同内容/同一Fileの重複も保持し、PDFの重複は独立文書にします。割当元変数名や業務上の役割は推定しません。`dpi`は既定150、36〜管理者上限（既定200）です。0件では変換しないためpluginのDPI検査も不要です。
