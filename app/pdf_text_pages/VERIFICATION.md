@@ -1,5 +1,7 @@
 # 検証記録
 
+0.1.7 / agen-i 修復候補の差分: 配信先の環境変数直接読取を、既存Difyセッションの署名UploadFileメタデータによる独立source取得へ置換し、本文uploadはしません。0.1.6 fetch/変換/outputの安全境界は不変、既定Limitsを使います。正規の内部originはcoreの最終INTERNAL_FILES_URLへ供給する契約で、pluginのURL推測やHTTPS降級は行いません。標準Composeではdocker/.envが後勝ちです。今回の問題の正常系は利用者が受け入れています。リファクタリングでは既存の関連回帰125件を実行し、未使用設定層の除去と安全・出力条件の維持を確認しました。これは過去の空入力traceを画像取得の証拠へ変換するものではありません。さらに公開SDKの単一Fileと、filename/extensionが無いPDFを同一実PDFでRed→Green確認し、関連58件を再実行しました。SDKのBLOB/chunk生成まで実測し、実Difyストレージへの保存・元appの入力形は別の未観測境界として保持します。以下は引継ぎbaselineの記録です。
+
 ## 0.1.6：PDF変換とその他ファイルの元bytes返却
 
 committed0.1.5 e8fc0d3/package SHA71c497f58f4d1bdb16973d0c4db6dc90c1bcb11dc0d258907c41c09d19978340が採用元です。ユーザーは同版の添付と空入力の正常動作を確認しています。0.1.6は拡張子優先/欠損時filename末尾/PDFだけsignature・parser検査、MIMEだけのPDF昇格無し。その他は既存fetchをそのまま使いbytes/filename/MIMEを返却し、混在filesの位置だけPDF metadataへ反映します。schema1.0/PDF-only documentsと内部PDF連番検査は不変。PDF無しtextは完全空、入力無しは従来の設定検査/通信/変換無しです。

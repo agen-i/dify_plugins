@@ -10,3 +10,4 @@ dist/
 *.difypkg
 .env
 .env.*
+tests/

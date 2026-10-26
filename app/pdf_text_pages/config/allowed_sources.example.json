@@ -1,9 +1,0 @@
-[
-  {
-    "scheme": "http",
-    "host": "dify.example",
-    "port": 80,
-    "path_prefix": "/files/",
-    "address": "192.0.2.1"
-  }
-]

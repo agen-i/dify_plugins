@@ -1,3 +1,5 @@
+0.1.7 / agen-i修復候補の現行検証は、実serverの最終docker/.envにあるINTERNAL_FILES_URL=http://difyを正規serializerへ供給し、独立署名メタデータのoriginとFile originが一致して元clipboard画像の内部取得が成功することです。反映は通常の`docker compose up -d --no-deps api worker`をroot操作境界で扱い、force再作成・全.env表示・debug.env変更は行いません。現時点はserver未適用/元画像成功未確認です。以下の過去手順は引継記録として保持します。
+
 # 実機検証の引継ぎ
 
 実施ownerは顧客Dify workspace管理者と、その実行環境へのアクセスを許可された担当者です。窓口は2026-10-05の応答ヘッダー`X-Version: 1.17.1` / `X-Env: PRODUCTION`で対象Dify installed版を確認しました。対象daemon実版・pluginへの設定継承・直接接続は未確認です。コード/ローカル変換の合格を実機受入へ読み替えません。

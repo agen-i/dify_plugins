@@ -1,6 +1,6 @@
 identity:
   name: pdf_text_pages
-  author: tkosht
+  author: agen-i
   label:
     en_US: PDF Text and Pages
     ja_JP: PDF本文・ページ画像
@@ -12,13 +12,13 @@ description:
 parameters:
   - name: pdf_files
     type: files
-    required: false
+    required: true
     label:
       en_US: File list
       ja_JP: ファイルリスト
     human_description:
-      en_US: Select sys.files, another File list, or a single File variable. Order and duplicates are kept; empty is allowed.
-      ja_JP: sys.files・任意のFileリスト・単一File変数を指定します。順序と重複を保持し、0件も受け付けます。
+      en_US: Select the variable that receives PDF/image files, such as sys.files, another File list, or a single File. A connected empty list is allowed.
+      ja_JP: ファイルリストにPDF/画像を受け取る変数を設定してください。sys.files・任意のFileリスト・単一File変数に対応し、接続済み変数の0件も受け付けます。
     llm_description: File list in original order. PDFs become text and all page images; other files pass through unchanged. Empty input returns empty outputs.
     form: llm
   - name: dpi

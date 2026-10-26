@@ -9,9 +9,7 @@ from pdf_core.model import ConversionError
 from tools.pdf_text_pages import PdfTextPagesTool
 
 
-@pytest.mark.parametrize(
-    "parameters", [{}, {"pdf_files": None}, {"pdf_files": []}]
-)
+@pytest.mark.parametrize("parameters", [{"pdf_files": []}])
 def test_empty_files_skip_config_dpi_network_and_conversion(
     monkeypatch, parameters
 ):
@@ -32,7 +30,7 @@ def test_empty_files_skip_config_dpi_network_and_conversion(
         )
 
     for name in (
-        "load_runtime_sources",
+        "discover_runtime_sources",
         "fetch",
         "execution_slot",
         "convert",
@@ -67,3 +65,12 @@ def test_falsy_malformed_list_is_not_empty_success(monkeypatch, value):
         list(
             PdfTextPagesTool.from_credentials({})._invoke({"pdf_files": value})
         )
+
+
+@pytest.mark.parametrize("parameters", [{}, {"pdf_files": None}])
+def test_unconfigured_files_public_invoke_reports_required_input(parameters):
+    with pytest.raises(
+        ConversionError,
+        match="pdf_files: INPUT: ファイルリストにPDF/画像を受け取る変数を設定してください",
+    ):
+        list(PdfTextPagesTool.from_credentials({}).invoke(parameters))

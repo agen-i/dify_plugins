@@ -7,11 +7,12 @@ from uuid import uuid4
 from dify_plugin import Tool
 from dify_plugin.entities.tool import ToolInvokeMessage
 from dify_plugin.file.file import File
-from pdf_core.config import Limits, load_runtime_sources
+from pdf_core.config import Limits
 from pdf_core.fetch import fetch
 from pdf_core.formatting import format_text
 from pdf_core.model import BatchRecord, ConversionError, InputPDF
 from pdf_core.runner import convert, execution_slot
+from pdf_core.runtime_source import discover_runtime_sources
 
 
 def normalize(
@@ -19,6 +20,8 @@ def normalize(
 ) -> list[tuple[str, int, File]]:
     items: list[tuple[str, int, File]] = []
     files = parameters.get("pdf_files")
+    if isinstance(files, File):
+        files = [files]
     if files is not None:
         if not isinstance(files, list):
             raise ConversionError("pdf_files: INPUT: expected File list")
@@ -54,18 +57,22 @@ class PdfTextPagesTool(Tool):
         self, tool_parameters: dict[str, Any]
     ) -> Generator[ToolInvokeMessage, None, None]:
         files = tool_parameters.get("pdf_files")
-        if files is None or (isinstance(files, list) and not files):
+        if files is None:
+            raise ConversionError(
+                "pdf_files: INPUT: ファイルリストにPDF/画像を受け取る変数を設定してください"
+            )
+        if isinstance(files, list) and not files:
             # No input files means no source/config/DPI/slot/native work is necessary.
             # No BLOB messages preserves Dify's standard files=[] output.
             batch = BatchRecord("B" + uuid4().hex.upper(), [])
             yield self.create_text_message("")
             yield self.create_json_message(batch.metadata())
             return
-        limits = Limits.from_env()
-        sources = load_runtime_sources()
+        limits = Limits()
         dpi = limits.dpi(tool_parameters.get("dpi"))
         items = normalize(tool_parameters, limits)
         deadline = time.monotonic() + limits.request_seconds
+        sources = discover_runtime_sources(self.session, limits, deadline)
         with execution_slot(limits):
             inputs: list[InputPDF] = []
             passthrough: dict[int, bytes] = {}
@@ -83,6 +90,12 @@ class PdfTextPagesTool(Tool):
                         file.extension or Path(file.filename or "").suffix
                     )
                     is_pdf = extension.lower() in ("pdf", ".pdf")
+                    if not extension:
+                        is_pdf = (file.mime_type or "").split(";", 1)[
+                            0
+                        ].strip().lower() == "application/pdf" or data.startswith(
+                            b"%PDF-"
+                        )
                     if is_pdf and not data.startswith(b"%PDF-"):
                         raise ConversionError(
                             "PDF_OPEN: invalid PDF signature"

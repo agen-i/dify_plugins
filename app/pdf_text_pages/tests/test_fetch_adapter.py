@@ -6,7 +6,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import pytest
 from dify_plugin.entities.tool import ToolInvokeMessage
 from dify_plugin.file.file import File
-from pdf_core.config import Limits, load_sources
+from pdf_core.config import AllowedSource, Limits
 from pdf_core.fetch import fetch, select_source
 from pdf_core.model import ConversionError
 from tools.pdf_text_pages import PdfTextPagesTool, normalize
@@ -52,18 +52,10 @@ def server(monkeypatch):
     worker = threading.Thread(target=httpd.serve_forever, daemon=True)
     worker.start()
     port = httpd.server_address[1]
-    raw = json.dumps(
-        [
-            {
-                "scheme": "http",
-                "host": "dify.test",
-                "port": port,
-                "path_prefix": "/files/",
-                "address": "127.0.0.1",
-            }
-        ]
+    raw = (AllowedSource("http", "dify.test", port, "/files/", "127.0.0.1"),)
+    monkeypatch.setattr(
+        "tools.pdf_text_pages.discover_runtime_sources", lambda *args: raw
     )
-    monkeypatch.setenv("INTERNAL_FILES_URL", f"http://dify.test:{port}")
     import pdf_core.fetch as fetch_module
 
     monkeypatch.setattr(
@@ -96,7 +88,7 @@ def test_reject_path_boundaries_without_network(server, path):
     with pytest.raises(ConversionError, match="FETCH_DENIED"):
         fetch(
             base + path,
-            load_sources(raw),
+            raw,
             Limits(),
             100000,
             time.monotonic() + 2,
@@ -117,7 +109,7 @@ def test_reject_path_boundaries_without_network(server, path):
 )
 def test_url_rules(url, server):
     with pytest.raises(ConversionError, match="FETCH_DENIED"):
-        select_source(url, load_sources(server[1]))
+        select_source(url, server[1])
     assert server[2] == []
 
 
@@ -128,7 +120,7 @@ def test_pinned_host_proxy_disabled_and_actual_byte_limits(
     monkeypatch.setenv("HTTP_PROXY", "http://invalid:9")
     monkeypatch.setenv("HTTPS_PROXY", "http://invalid:9")
     monkeypatch.setenv("ALL_PROXY", "http://invalid:9")
-    sources = load_sources(raw)
+    sources = raw
     assert (
         fetch(
             base + "/files/x?signed=DO_NOT_LOG",
@@ -166,7 +158,7 @@ def test_redirect_not_followed_and_signed_url_error_sanitized(server, caplog):
     with pytest.raises(ConversionError) as caught:
         fetch(
             base + "/files/redirect?token=" + secret,
-            load_sources(raw),
+            raw,
             Limits(),
             10000,
             time.monotonic() + 2,
@@ -182,7 +174,7 @@ def test_cumulative_deadline_includes_drip_headers(server):
     with pytest.raises(ConversionError):
         fetch(
             base + "/files/drip?token=HIDDEN",
-            load_sources(raw),
+            raw,
             Limits(),
             10000,
             start + 0.35,
@@ -244,6 +236,33 @@ def test_sdk_inputs_output_messages_direct_contract(server, count):
         assert document["pages"][0]["page_id"] in messages[0].message.text
 
 
+def test_public_sdk_single_file_preserves_pdf_output_contract(server):
+    base, sources, _, _ = server
+    messages = list(
+        adapter(sources).invoke(
+            {
+                "pdf_files": dify_file(
+                    base + "/files/a/file-preview"
+                ).model_dump(mode="json"),
+                "dpi": 36,
+            }
+        )
+    )
+    assert [message.type.value for message in messages] == [
+        "text",
+        "blob",
+        "json",
+    ]
+    assert "ALPHA" in messages[0].message.text
+    assert messages[1].message.blob.startswith(b"\x89PNG")
+    document = messages[-1].message.json_object["documents"][0]
+    assert document["source_index"] == 0
+    assert document["pages"][0]["image_index"] == 0
+    assert (
+        messages[1].meta["filename"] == document["pages"][0]["image_filename"]
+    )
+
+
 def test_no_partial_yield_for_late_failure(server):
     base, raw, _, _ = server
     generator = adapter(raw)._invoke(
@@ -280,7 +299,7 @@ def test_no_partial_yield_for_whole_request_deadline(server, monkeypatch):
         return pdf
 
     monkeypatch.setattr(module, "fetch", delayed)
-    monkeypatch.setenv("PDF_TEXT_PAGES_LIMITS", '{"request_seconds":1}')
+    monkeypatch.setattr(module, "Limits", lambda: Limits(request_seconds=1))
     generator = adapter(raw)._invoke(
         {
             "pdf_files": [
@@ -304,14 +323,6 @@ def test_no_partial_yield_for_whole_request_deadline(server, monkeypatch):
 def test_no_urls_or_paths(parameters):
     with pytest.raises(ConversionError):
         normalize(parameters, Limits())
-
-
-@pytest.mark.parametrize(
-    "raw", [None, "[]", "{}", '{"scheme":"http"}', '[{"scheme":"file"}]']
-)
-def test_admin_allowlist_fail_closed(raw):
-    with pytest.raises(ConversionError, match="CONFIG"):
-        load_sources(raw)
 
 
 def test_https_pinned_ip_preserves_sni_and_verifies_hostname(
@@ -375,19 +386,13 @@ def test_https_pinned_ip_preserves_sni_and_verifies_hostname(
     )
     port = httpd.server_address[1]
     try:
-        raw = [
-            {
-                "scheme": "https",
-                "host": "dify.test",
-                "port": port,
-                "path_prefix": "/files/",
-                "address": "127.0.0.1",
-            }
-        ]
+        raw = (
+            AllowedSource("https", "dify.test", port, "/files/", "127.0.0.1"),
+        )
         assert (
             fetch(
                 f"https://dify.test:{port}/files/a",
-                load_sources(raw),
+                raw,
                 Limits(),
                 1000,
                 time.monotonic() + 3,
@@ -395,11 +400,13 @@ def test_https_pinned_ip_preserves_sni_and_verifies_hostname(
             == b"%PDF-test"
         )
         assert seen == [f"dify.test:{port}"] and sni == ["dify.test"]
-        raw[0]["host"] = "other.test"
+        raw = (
+            AllowedSource("https", "other.test", port, "/files/", "127.0.0.1"),
+        )
         with pytest.raises(ConversionError, match="FETCH_FAILURE"):
             fetch(
                 f"https://other.test:{port}/files/a?token=HIDDEN",
-                load_sources(raw),
+                raw,
                 Limits(),
                 1000,
                 time.monotonic() + 3,
@@ -412,17 +419,7 @@ def test_https_pinned_ip_preserves_sni_and_verifies_hostname(
 
 
 def test_ipv6_authority_and_pinned_address():
-    source = load_sources(
-        [
-            {
-                "scheme": "http",
-                "host": "::1",
-                "port": 8765,
-                "path_prefix": "/files/",
-                "address": "::1",
-            }
-        ]
-    )
+    source = (AllowedSource("http", "::1", 8765, "/files/", "::1"),)
     selected, path = select_source("http://[::1]:8765/files/a", source)
     assert selected.address == "::1" and path == "/files/a"
     with pytest.raises(ConversionError):

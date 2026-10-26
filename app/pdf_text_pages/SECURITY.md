@@ -1,5 +1,7 @@
 # 安全性・導入運用
 
+0.1.7 / agen-i 修復候補の差分: 配信先の環境変数直接読取を、既存Difyセッションの署名UploadFileメタデータによる独立source取得へ置換し、本文uploadはしません。0.1.6 fetch/変換/outputの安全境界は不変、既定Limitsを使います。正規の内部originはcoreの最終INTERNAL_FILES_URLへ供給する契約で、pluginのURL推測やHTTPS降級は行いません。標準Composeではdocker/.envが後勝ちです。server適用/元画像の実成功は未確認で、以下は引継ぎbaselineの記録です。
+
 基準記録: 2026-10-04 UTC。認証修復の対象source確認日: 2026-10-05。実装とローカル試験の事実を記録し、顧客環境での安全認定を意味しません。
 
 ## 通信と権限

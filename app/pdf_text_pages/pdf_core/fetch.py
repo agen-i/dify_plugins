@@ -56,8 +56,7 @@ def select_source(
                         route,
                     ):
                         continue
-                retrieval = source._target or source
-                return retrieval, path + ("?" + u.query if u.query else "")
+                return source, path + ("?" + u.query if u.query else "")
         raise ValueError
     except Exception:
         raise ConversionError("FETCH_DENIED: source is not approved") from None
