@@ -1,0 +1,39 @@
+{
+  "files": {
+    ".difyignore": "f516dbbfe875dcb9972cefbe89fd61b7c71c0abf3490aabbb90ba9c3b8bdc38d",
+    ".gitignore": "3900f394fbb752d37fc221c190bfc00b1afaf0dd4bd5f65f29da8ab05315420a",
+    "LICENSE": "672abf19c1f2c50c044da7b33344842c5d647b337f0f37d8fd1f229966697335",
+    "PRIVACY.md": "9b192335efbb84da568d90a12779b1e84d2845fd6c1786a3e53e51c1e6022a8a",
+    "README.md": "f36bbe4e7363299b1c4f860600e7e49791541f389885cbc1724b7ebbc36361d0",
+    "_assets/icon.svg": "33c42162accd80f0638d060272d585b00c6be7220842c5cb5de492c3ce66dabe",
+    "main.py": "b007040a9fef813106bbd2147f44dc794e1069bf48c024fed44e289f7b1db218",
+    "manifest.yaml": "30d90760a105028ce830145be637e7723aa67e13ba9582852cea71e06c559daa",
+    "provider/read_region.py": "0aedceba313f4095f4471e02360c4ba9ca8b88bf7e62c7b9dfc71a78f6fd734e",
+    "provider/read_region.yaml": "611642f22bb017f3dd47dfd06bb31d589d3a0544eb93650e6dc73138d2fc3c6f",
+    "pyproject.toml": "a80b93c06076cf56b5a9d39c731e63292caed4e5d2dd769b977d3107f427282d",
+    "read_region-0.4.2.difypkg": "e355c64596b9c6492fd8e1e952d0e6780a5be2ef53e3bc4868591a9e4afd962a",
+    "requirements.txt": "8ab5b4c3a46b8a747d7080dd01690b456e1f456ec24b38368853992ad7c12a7e",
+    "tests/test_fetch.py": "4df48ff93436cad870de2b2a1cdd7d38cdbd6762f2262d5f441d86733692b790",
+    "tests/test_images.py": "ce703f56c059071010e7cdd47613cf6d83e0bae4cd1afba136d70f1d1e69d32f",
+    "tests/test_native_origin.py": "0adb0ff632d64ea51764d6be986e202c574c0aeebbb981e27a07a44b91c253f6",
+    "tests/test_sdk_tool.py": "0790544c462d0f1c5f49e72e73efdfb90d6f345a52f0826813ffabde79508879",
+    "tools/read_region.py": "d936491abef10ee7f03bf84ee194f3192099a37598da6a842a163142e3b21e5e",
+    "tools/read_region.yaml": "8426ebc0cb8475c8d638cc4ae594881e1ae156f4f5343f26d54d9c5c911da34e",
+    "uv.lock": "1f658098a884b0232482a14c3b2af63ea4bb2d6104c809ab87269dff5415d235",
+    "verification/managed-vision-proof.json": "508eabe4ad9bbe5312f99a3e139adf6e5a89425387bc34a34d7b5bf635c5b9bc",
+    "verification/runtime-python.sha256.json": "24a44458eaee7b622724e8839ecc889351a31afce5d2e7043af73abfabd63241",
+    "vision_core/__init__.py": "6ba8ac4ce4f8ba764c6fc3958ff5d28d09a314b661edd323b74d635141528d5c",
+    "vision_core/fetch.py": "5853b09f51b02042a8e37ffffc5dbd81a46e6786d47554eca8d403eab38543c9",
+    "vision_core/images.py": "06f790c3e7a2e9e7de27758542676593edd9122eff09430534ff68557e5ab5b5",
+    "vision_core/origin.py": "a21de801b1b9353b3734a1099faad547486978f7b9f07858e488f383fd2caa9f"
+  },
+  "package_sha256": "e355c64596b9c6492fd8e1e952d0e6780a5be2ef53e3bc4868591a9e4afd962a",
+  "actual_transport_tested_package_sha256": "011bd9329a5a27e6182f0c22da25537cf6c66fe5aa5162b0a48e964995f29095",
+  "targeted_runtime_change": "Native16-bit gray samples and tRNS, with unsupported16-bit color rejection; no SDK transport change.",
+  "transfer": {
+    "source_repository": "https://github.com/tkosht/dify_plugins",
+    "source_commit": "08d8ba405aff64871e06a41bd77c21447da52d95",
+    "scope": "read_region current0.4.2 source and package only",
+    "runtime_code_changed": false
+  }
+}

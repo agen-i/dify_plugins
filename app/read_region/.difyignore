@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+tests/
+.local-bin/
+.runtime/
+.pytest_cache/
+.ruff_cache/
+uv.lock
+pyproject.toml
+*.difypkg
+
+SOURCE_SHA256.json
+verification/

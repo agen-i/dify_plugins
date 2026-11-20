@@ -9,6 +9,7 @@
 | `openai_gpt5_responses` | OpenAI Responsesモデルprovider | [README](app/openai_gpt5_responses/README.md) |
 | `pdf_text_pages` | PDF本文・ページ画像 | [README](app/pdf_text_pages/README.md) |
 | `sharepoint_list` | SharePointリスト操作 | [README](app/sharepoint_list/README.md) |
+| `read_region` | New Agentの原画像・原画素crop表示 | [README](app/read_region/README.md) |
 
 ## 開発と実行
 
@@ -24,7 +25,7 @@ uv run python main.py
 
 `main.py` はDify plugin runtimeの入口です。実サービスへの接続には各pluginのREADMEに記載された認証・接続設定が必要です。環境ファイルや認証値はこのコピーに含めていません。通常のprovider認証はDify上で設定し、開発runtimeの接続設定は利用者のローカル環境で管理してください。
 
-SDK 0.9.1を固定したプラグインと、SDK 0.10.2を使うPDFプラグインを一つの環境へ混ぜないでください。`requirements.txt` はDifyパッケージ向けの既存依存宣言として保持し、ローカル開発には各 `pyproject.toml` と `uv.lock` を使います。
+SDK 0.9.1、PDFのSDK 0.10.2、read_regionのSDK 0.11.1を一つの環境へ混ぜないでください。`requirements.txt` はDifyパッケージ向けの既存依存宣言として保持し、ローカル開発には各 `pyproject.toml` と `uv.lock` を使います。
 
 ## テスト
 

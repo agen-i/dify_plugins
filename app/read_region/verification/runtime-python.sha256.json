@@ -1,0 +1,25 @@
+{
+  "actual_transport_tested_package_sha256": "011bd9329a5a27e6182f0c22da25537cf6c66fe5aa5162b0a48e964995f29095",
+  "actual_tested_runtime_python": {
+    "main.py": "b007040a9fef813106bbd2147f44dc794e1069bf48c024fed44e289f7b1db218",
+    "provider/read_region.py": "0aedceba313f4095f4471e02360c4ba9ca8b88bf7e62c7b9dfc71a78f6fd734e",
+    "tools/read_region.py": "d936491abef10ee7f03bf84ee194f3192099a37598da6a842a163142e3b21e5e",
+    "vision_core/__init__.py": "6ba8ac4ce4f8ba764c6fc3958ff5d28d09a314b661edd323b74d635141528d5c",
+    "vision_core/fetch.py": "5853b09f51b02042a8e37ffffc5dbd81a46e6786d47554eca8d403eab38543c9",
+    "vision_core/images.py": "521121f93a8b5c055acb9b4156f143b2170eeb03ccb28a01103aa9dbf6d2c5ec",
+    "vision_core/origin.py": "a21de801b1b9353b3734a1099faad547486978f7b9f07858e488f383fd2caa9f"
+  },
+  "current_runtime_python": {
+    "main.py": "b007040a9fef813106bbd2147f44dc794e1069bf48c024fed44e289f7b1db218",
+    "vision_core/__init__.py": "6ba8ac4ce4f8ba764c6fc3958ff5d28d09a314b661edd323b74d635141528d5c",
+    "vision_core/fetch.py": "5853b09f51b02042a8e37ffffc5dbd81a46e6786d47554eca8d403eab38543c9",
+    "vision_core/images.py": "06f790c3e7a2e9e7de27758542676593edd9122eff09430534ff68557e5ab5b5",
+    "vision_core/origin.py": "a21de801b1b9353b3734a1099faad547486978f7b9f07858e488f383fd2caa9f",
+    "tools/read_region.py": "d936491abef10ee7f03bf84ee194f3192099a37598da6a842a163142e3b21e5e",
+    "provider/read_region.py": "0aedceba313f4095f4471e02360c4ba9ca8b88bf7e62c7b9dfc71a78f6fd734e"
+  },
+  "changed_runtime": [
+    "vision_core/images.py"
+  ],
+  "change_coverage": "16-bit grayscale native samples/full/crop/tRNS preservation and explicit unsupported16-bit color rejection; other transport code unchanged."
+}

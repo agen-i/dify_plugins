@@ -1,0 +1,174 @@
+{
+  "actual_run": {
+    "crop_dimensions": [
+      400,
+      300
+    ],
+    "crop_source_pixels": [
+      960,
+      660,
+      1360,
+      960
+    ],
+    "full_original_dimensions": [
+      2048,
+      1536
+    ],
+    "http_status": 200,
+    "image_part_counts_after_read_media": [
+      2,
+      3
+    ],
+    "initial_image_alone_cannot_pass": true,
+    "initial_uploaded_image_count": 1,
+    "no_ocr_used": true,
+    "nodes": [
+      "start",
+      "agent",
+      "answer"
+    ],
+    "provider_calls": [
+      {
+        "operation": "actual_native_vision_provider",
+        "prior_tool_calls": 0,
+        "stage": "request_full_original",
+        "tool_names": [
+          "read_region",
+          "shell_run",
+          "shell_wait",
+          "shell_input",
+          "shell_interrupt",
+          "read_media"
+        ],
+        "typed_image_parts": 1
+      },
+      {
+        "operation": "actual_native_vision_provider",
+        "prior_tool_calls": 1,
+        "stage": "request_native_read_media",
+        "tool_names": [
+          "read_region",
+          "shell_run",
+          "shell_wait",
+          "shell_input",
+          "shell_interrupt",
+          "read_media"
+        ],
+        "typed_image_parts": 1
+      },
+      {
+        "height": 1536,
+        "image_sha256": "5dcb24f0c7952845454655c12e4b5a50518e8f6404477ce941b075a9eb3858ce",
+        "mode": "full",
+        "new_typed_images_beyond_original": 1,
+        "operation": "actual_native_vision_provider",
+        "prior_tool_calls": 2,
+        "source_pixels_exact": true,
+        "stage": "actual_pixels_decoded",
+        "tool_names": [
+          "read_region",
+          "shell_run",
+          "shell_wait",
+          "shell_input",
+          "shell_interrupt",
+          "read_media"
+        ],
+        "typed_image_parts": 2,
+        "visual_only_marker_decoded": true,
+        "width": 2048
+      },
+      {
+        "operation": "actual_native_vision_provider",
+        "prior_tool_calls": 3,
+        "stage": "request_native_read_media",
+        "tool_names": [
+          "read_region",
+          "shell_run",
+          "shell_wait",
+          "shell_input",
+          "shell_interrupt",
+          "read_media"
+        ],
+        "typed_image_parts": 2
+      },
+      {
+        "height": 300,
+        "image_sha256": "1c61a1263c0628f94505f45aff0eb737ede9e6b0bbb5e120b942ef54cd606eb1",
+        "mode": "crop",
+        "new_typed_images_beyond_original": 2,
+        "operation": "actual_native_vision_provider",
+        "prior_tool_calls": 4,
+        "source_pixels_exact": true,
+        "stage": "actual_pixels_decoded",
+        "tool_names": [
+          "read_region",
+          "shell_run",
+          "shell_wait",
+          "shell_input",
+          "shell_interrupt",
+          "read_media"
+        ],
+        "typed_image_parts": 3,
+        "visual_only_marker_decoded": true,
+        "width": 400
+      }
+    ],
+    "same_conversation": true,
+    "visual_marker_only_in_image_pixels": true,
+    "workflow_status": "succeeded"
+  },
+  "logs": {
+    "known_private_values_checked": 31,
+    "private_value_matches": 0,
+    "scope": "Own ordinary container and test-provider process logs; Dify stored conversations/execution history remain separate.",
+    "signed_url_query_pattern_found": false,
+    "source_png_base64_canary_found": false
+  },
+  "native_file_authority": {
+    "actual_daemon_uses_environment_allowlist": true,
+    "daemon_api_origin_environment_available": false,
+    "handshake_uploads_or_creates_dummy_file": false,
+    "independent_packet_capture_performed": false,
+    "no_environment_injection_or_fixed_origin_fallback": true,
+    "no_file_creation_evidence": "Pinned helper only requests grant metadata; API pure signed-URI generation precedes actual upload POST. No HTTP upload call in helper.",
+    "origin_match_evidence": "Exact managed041 code rejects mismatch before download; actual full/crop downloads succeeded. No origin override supplied.",
+    "sole_origin_carrier": "Authenticated native SDK UploadFile metadata handshake response",
+    "source_and_grant_origin_match": true
+  },
+  "platform": {
+    "daemon": "0.6.15-local",
+    "dify": "1.20.0",
+    "no_platform_or_sdk_patch": true,
+    "normal_studio_equivalent_agent_node": {
+      "agent_node_kind": "dify_agent",
+      "type": "agent",
+      "version": "2"
+    },
+    "official_commit": "7bef4e1b2dc21b2c694d3243425dd3fa6288f916",
+    "standard_agent_backend": true,
+    "standard_local_sandbox_home_dependency": true
+  },
+  "plugin": {
+    "credentials_or_private_profile_required": false,
+    "name": "tkosht/read_region",
+    "normal_console_install": 200,
+    "normal_console_upload": 200,
+    "normal_registry_exact_version_verified": true,
+    "package_sha256": "011bd9329a5a27e6182f0c22da25537cf6c66fe5aa5162b0a48e964995f29095",
+    "primary_remote_sdk_process": false,
+    "runtime_type": "local",
+    "source": "package",
+    "version": "0.4.1"
+  },
+  "purpose": "Agent sees full original and native-pixel crop as actual image content in next model context of same conversation.",
+  "schema_version": 1,
+  "validation_limits": [
+    "Local deterministic vision/function-calling provider decodes actual image bytes; real LLM visual reasoning quality is not claimed.",
+    "Test-only own daemon accepts unsigned fixture packages; no production signature policy was changed.",
+    "Dify1.18 and Classic Agent strategies do not establish this image-return path; compatibility established only for tested1.20 native New Agent.",
+    "Native New Agent exposes standard confined-shell tools; they were not invoked by this proof.",
+    "Source/image authorization negative coverage is separate from this one successful transport proof.",
+    "Earlier invalid040 staging attempt is excluded; this result required exact041 API staged hash, registry version and composer gate.",
+    "No claim of portable/import-tested workflow YAML is made for the kit; node configuration recipe is supplied."
+  ]
+}
