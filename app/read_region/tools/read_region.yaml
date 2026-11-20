@@ -1,0 +1,63 @@
+identity:
+  author: tkosht
+  name: read_region
+  label:
+    en_US: View original image or crop
+    ja_JP: 原画像・切り出し画像を見る
+description:
+  human:
+    en_US: Return a full original-resolution image or an original-pixel crop. Dify1.20 New Agent must use native read_media to place it in the next vision-model context.
+  llm: Use the authorized native file locator from the current input files. Omit coordinates to view the whole source. For details specify normalized left/top/right/bottom coordinates. The output is an actual PNG at original pixel resolution, with no resizing, OCR or invented detail. Use native read_media on the returned tool-file locator to SEE it before answering. Never pass an arbitrary URL or fabricated file object.
+parameters:
+  - name: source_image
+    type: file
+    required: true
+    form: llm
+    label:
+      en_US: Authorized source image
+    human_description:
+      en_US: Native Dify input-file handle, not a URL.
+    llm_description: Authorized image locator from the current job input files. Do not construct a URL or raw file DTO.
+  - name: x_min
+    type: number
+    required: false
+    default: 0
+    min: 0
+    max: 1
+    form: llm
+    label: {en_US: Left}
+    human_description: {en_US: Normalized left coordinate.}
+    llm_description: Left coordinate in the normalized original after EXIF orientation.
+  - name: y_min
+    type: number
+    required: false
+    default: 0
+    min: 0
+    max: 1
+    form: llm
+    label: {en_US: Top}
+    human_description: {en_US: Normalized top coordinate.}
+    llm_description: Top coordinate in the normalized original after EXIF orientation.
+  - name: x_max
+    type: number
+    required: false
+    default: 1
+    min: 0
+    max: 1
+    form: llm
+    label: {en_US: Right}
+    human_description: {en_US: Normalized right coordinate.}
+    llm_description: Right coordinate, greater than x_min.
+  - name: y_max
+    type: number
+    required: false
+    default: 1
+    min: 0
+    max: 1
+    form: llm
+    label: {en_US: Bottom}
+    human_description: {en_US: Normalized bottom coordinate.}
+    llm_description: Bottom coordinate, greater than y_min.
+extra:
+  python:
+    source: tools/read_region.py

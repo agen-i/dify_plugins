@@ -1,0 +1,27 @@
+version: 0.4.2
+type: plugin
+author: tkosht
+name: read_region
+label:
+  en_US: Original image region
+  ja_JP: 原画像の領域表示
+description:
+  en_US: Stateless original-pixel image views for Dify1.20 native New Agent vision context.
+icon: icon.svg
+resource:
+  memory: 536870912
+  permission: {}
+plugins:
+  tools:
+    - provider/read_region.yaml
+meta:
+  version: 0.1.0
+  arch: [amd64, arm64]
+  runner:
+    language: python
+    version: '3.12'
+    entrypoint: main
+  minimum_dify_version: 1.20.0
+created_at: 2026-11-20T00:00:00Z
+privacy: PRIVACY.md
+verified: false

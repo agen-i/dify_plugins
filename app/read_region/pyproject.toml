@@ -1,0 +1,16 @@
+[project]
+name = "read-region-vision"
+version = "0.4.2"
+requires-python = ">=3.12,<3.13"
+dependencies = ["dify-plugin==0.11.1", "Pillow==13.0.0"]
+[dependency-groups]
+dev = ["pytest==9.0.3", "ruff==0.15.15", "black==26.5.1", "PyYAML==6.0.3"]
+[tool.uv]
+package = false
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+[tool.ruff]
+target-version = "py312"
+line-length = 79

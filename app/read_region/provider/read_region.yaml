@@ -1,0 +1,16 @@
+identity:
+  author: tkosht
+  name: read_region
+  label:
+    en_US: Original image region
+    ja_JP: 原画像の領域表示
+  description:
+    en_US: View original image pixels or an unscaled crop through native Dify image context.
+  icon: icon.svg
+  tags: [utilities]
+credentials_for_provider: {}
+tools:
+  - tools/read_region.yaml
+extra:
+  python:
+    source: provider/read_region.py
