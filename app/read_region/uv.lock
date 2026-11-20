@@ -577,7 +577,7 @@ wheels = [
 
 [[package]]
 name = "read-region-vision"
-version = "0.4.2"
+version = "0.4.3"
 source = { virtual = "." }
 dependencies = [
     { name = "dify-plugin" },

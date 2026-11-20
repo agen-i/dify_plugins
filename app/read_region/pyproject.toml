@@ -1,6 +1,6 @@
 [project]
 name = "read-region-vision"
-version = "0.4.2"
+version = "0.4.3"
 requires-python = ">=3.12,<3.13"
 dependencies = ["dify-plugin==0.11.1", "Pillow==13.0.0"]
 [dependency-groups]

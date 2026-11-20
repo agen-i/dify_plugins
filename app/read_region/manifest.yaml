@@ -1,7 +1,9 @@
-version: 0.4.2
+version: 0.4.3
 type: plugin
-author: tkosht
+author: agen-i
 name: read_region
+repo: https://github.com/agen-i/dify_plugins
+contact: contact@agen-i.com
 label:
   en_US: Original image region
   ja_JP: 原画像の領域表示
