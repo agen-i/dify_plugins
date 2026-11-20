@@ -14,3 +14,7 @@ Unrelated template harnesses/docs, Docker/devcontainer tooling, old publishing w
 ## read_region transfer (2026-11-21)
 
 `app/read_region` is transferred separately from public `tkosht/dify_plugins` commit `08d8ba405aff64871e06a41bd77c21447da52d95` (merged vision PR117). Only current source/tests/locks/license/privacy, sanitized verification and the0.4.2 distribution are included; prior0.4.1 binaries, old OCR/strategy trees, runtime data and user kits are not copied. The exact0.4.2 package SHA256 is `e355c64596b9c6492fd8e1e952d0e6780a5be2ef53e3bc4868591a9e4afd962a`. Plugin author/name remain unchanged for compatibility. `app/read_region/SOURCE_SHA256.json` records this component; the earlier five-plugin inventory above remains historical. Target CI uses the component's independent locked environment. The prior managed0.4.1 vision-path evidence remains labeled as such;0.4.2 adds unit-verified native16-bit grayscale/tRNS preservation without claiming a new live deployment.
+
+## agen-i metadata0.4.3 (2026-11-21)
+
+The current manifest/provider/Tool author is now `agen-i`, with the supported repository URL and official public contact. This intentionally creates `agen-i/read_region`; the earlier compatibility-preserving0.4.2 transfer above remains historical. Runtime Python and MIT copyright attribution are unchanged. Git history retains the exact0.4.2 package and its evidence; user-delivered kits are not modified. Contact is declared for official Marketplace validation, with no Marketplace upload authorized or performed.
